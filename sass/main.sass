@@ -1,0 +1,532 @@
+@import "vars"
+
+body
+  @extend %text-reference
+  color: $text
+  background: $bg
+  overflow: hidden !important
+
+a
+  color: $text
+  text-decoration: none
+  transition: .5s
+  cursor: pointer
+  &:hover
+    opacity: 0.7
+
+ul
+  margin: 0
+  padding: 0
+
+div
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+h1
+  @extend %title
+  margin: 0
+
+h2, h3
+  @extend %subtitle
+  margin: 0
+
+::-webkit-scrollbar
+  width: 10px
+
+::-webkit-scrollbar-track
+  background: $text
+  border-radius: 10px 
+
+::-webkit-scrollbar-thumb
+  background: $accent
+  border-radius: 10px
+
+::-webkit-scrollbar-thumb:hover
+  background: #839b9e
+
+@-moz-document url-prefix(http://),url-prefix(https://)
+  scrollbar
+    -moz-appearance: none !important
+    background: $text !important
+    border-radius: 10px !important
+  thumb,scrollbarbutton
+    -moz-appearance: none !important
+    background-color: $accent !important
+    border-radius: 10px !important
+  scrollbarbutton
+    display: none !important
+  scrollbar[orient="vertical"]
+    min-width: 10px !important
+
+@keyframes fade_in
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes fade_out
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+
+.fade_in
+  animation: fade_in 1s ease-in
+
+.fade_out
+  animation: fade_out 1s ease-out
+
+.hidden
+  display: none !important
+
+section
+  display: flex
+  flex-direction: column
+  width: 100vw
+  height: 100vh
+  margin: 0
+  padding: 0
+
+.container
+  width: 58vw
+  height: 100%
+  padding-left: 75px
+  padding-bottom: 75px
+  padding-top: 30px
+
+.dot-active
+  opacity: 0.7
+
+// burger
+#burger
+  position: fixed
+  right: 100px
+  top: 4vh
+  z-index: 2
+  
+
+@keyframes alarm
+	0%
+		transform: rotate(60deg)
+	20%
+		transform: rotate(120deg)
+	40%
+		transform: rotate(180deg)
+	60%
+		transform: rotate(240deg)
+	80%
+		transform: rotate(300deg)
+	100%
+		transform: rotate(360deg)
+
+#leftdrop
+  flex-direction: column
+  justify-content: space-evenly
+  text-align: center
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  z-index: 50
+  opacity: .98
+  display: none
+  background-color: $bg
+  .menu-item
+    font-size: 28px
+    cursor: pointer
+    &:hover
+      opacity: 0.7
+
+
+#close 
+  position: absolute
+  top: 4vh
+  right: 100px
+  i
+    animation: alarm .5s 1
+    animation-fill-mode: forwards
+    font-size: 32px
+    width: 23px
+    color: $accent
+
+#burger a
+	opacity: 1
+	background-color: transparent
+	border-radius: 0
+	padding: 0
+
+
+//end burger 
+
+.thumbnail
+  background-image: url('../img/about.png')
+  background-position: center bottom
+  background-size: cover
+  background-repeat: no-repeat
+  height: 92vh
+  width: 40vw
+  // max-height: 790px
+  max-width: 530px
+
+.filter_container
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: center
+  padding-top: 20px
+  // padding-left: 35px
+  .dropdown
+    position: relative
+    display: inline-block
+    &:hover, &:focus
+      .dropdown-content
+        display: block
+    .dropbtn
+      background-color: transparent
+      cursor: pointer
+      color: $accent
+      border: 2px solid $accent
+      background: url('../img/arrow-down.png') no-repeat 96% 50%
+      background-size: 25px
+      width: 430px
+      height: 45px
+      text-align: left
+    .dropdown-content
+      display: none
+      position: absolute
+      background-color: $bg
+      min-width: 160px
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+      z-index: 1
+      width: 100%
+      border: 2px solid $accent
+      border-top: 0
+      & button
+        color: $accent
+        border: 0
+        background-color: transparent
+        padding: 12px 16px
+        text-decoration: none
+        display: block
+        width: 100%
+        text-align: left
+        &:hover, &:focus
+          background-color: #5b6572
+          cursor: pointer
+
+
+// counter
+#counter
+  position: fixed
+  right: 100px
+  bottom: 4vh
+  height: 113px
+  .counter_current
+    font-size: 36px
+    color: $accent
+    width: 40px
+    position: relative
+    right: 2px
+    top: 36%
+    user-select: none
+    letter-spacing: 0.1em
+  a
+    background-size: contain
+    background-repeat: no-repeat
+    background-position-y: center
+    display: block
+    width: 40px
+    height: 40px
+  .counter_up
+    background-image: url('../img/arrow-up.png')
+    position: absolute
+    top: 0
+  .counter_down
+    background-image: url('../img/arrow-down.png')
+    position: absolute
+    bottom: 0
+// end counter
+
+// Первый экран
+#first
+  .first_bg
+    background-image: url('../img/header_bg.png')
+    background-position: center bottom
+    background-size: cover
+    background-repeat: no-repeat
+    width: 100vw
+    height: 60vh
+    position: relative
+  .first_avatar
+    height: 100%
+    position: relative
+  img
+    position: absolute
+    bottom: 0
+    right: 0
+    left: 0
+    top: 100%
+    margin: auto
+    max-width: 180px
+    max-height: 180px
+  .first_title
+    height: 100px
+    text-align: center
+    display: flex
+    justify-content: space-around
+    flex-direction: column
+    margin-top: 100px
+    .first_title-line
+      background: $accent
+      margin: auto
+      height: 2px
+      width: 60px
+      margin-bottom: 12px
+    .first_description
+      @extend %title
+  .first_blockquote
+    display: flex
+    flex-direction: column
+    justify-content: center
+    text-align: center
+    margin-top: 5vh
+    p
+      margin: 0
+
+// Обо мне
+
+#about
+  flex-direction: row
+  padding-left: 4vh
+  padding-top: 4vh
+  .about_wrap
+    overflow-y: auto
+    height: 100%
+  .education,.teach_exp,.tech_exp,.category,.training
+    margin-top: 25px
+    margin-left: 35px
+    & div
+      margin: 0
+      span
+        @extend %text-300
+        text-decoration: underline
+        width: min-content
+    ul
+      margin-left: 45px
+      margin-top: 10px
+      li
+        padding-left: 10px
+      li:not(:last-child)
+        margin-bottom: 10px
+    
+// Дисциплины
+#subjects
+  flex-direction: row
+  padding-left: 4vh
+  padding-top: 4vh
+  .thumbnail
+    background-image: url('../img/subject.png')
+  .subject_wrap
+    padding-top: 50px
+    padding-left: 50px
+    height: 100%
+    padding-bottom: 75px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    .subject
+      width: 100%
+      display: flex
+      .icon
+        width: 76px
+        min-width: 76px
+        height: 76px
+        background-repeat: no-repeat
+        background-size: contain
+      &:nth-child(1) .icon
+        background-image: url('../img/subject_icon1.png')
+      &:nth-child(2) .icon
+        background-image: url('../img/subject_icon2.png')
+      &:nth-child(3) .icon
+        background-image: url('../img/subject_icon3.png')  
+      &:nth-child(4) .icon
+        background-image: url('../img/subject_icon4.png')
+      &:nth-child(5) .icon
+        background-image: url('../img/subject_icon5.png')
+      &:nth-child(6) .icon
+        background-image: url('../img/subject_icon6.png')
+      &:nth-child(7) .icon
+        background-image: url('../img/subject_icon7.png')
+      .subject_title
+        display: flex
+        align-items: center
+        padding-left: 50px
+
+// Награды
+#awards
+  flex-direction: row
+  padding-left: 4vh
+  padding-top: 4vh
+  .container
+    overflow: hidden
+  .thumbnail
+    background-image: url('../img/awards.png')
+  .awards_wrap
+    margin-top: 20px
+    max-height: 75vh
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-around
+    overflow-y: auto
+    .award
+      width: 200px
+      display: flex
+      align-items: center
+      margin-right: 1.5vw
+      margin-bottom: 30px
+      img
+        width: inherit
+
+// Файлы
+#files
+  flex-direction: row
+  padding-left: 4vh
+  padding-top: 4vh
+  .thumbnail
+    background-image: url('../img/files.png')
+  .container
+    overflow: hidden
+    .files_wrap
+      margin-top: 20px
+      max-height: 75vh
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      overflow-y: auto
+    .file
+      display: flex
+      width: 100%
+      display: flex
+      align-items: center
+      & a
+        min-width: 40px
+        margin-right: 30px
+    .clearboth
+      display: flex
+      justify-content: flex-end
+      .truncate_more_link
+        font-size: 18px
+        color: $accent
+
+// Галерея
+#gallery
+  .container
+    padding-top: 100px
+    padding-right: 75px
+    width: 100%
+    padding-right: 13vw
+    padding-left: 13vw
+    .photo_wrap
+      margin-top: 35px
+      overflow-y: scroll !important
+      height: 78vh
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: start
+      & a
+        width: 300px
+        height: 200px
+        display: inline-block
+        margin-right: auto
+        margin-bottom: 30px
+        & img 
+          margin-top: 8px
+          vertical-align: middle
+          width: 100%
+          height: 100%
+          object-fit: cover
+    & h2
+      text-align: center
+    
+
+// Контакты
+#contacts
+  flex-direction: row
+  padding-left: 4vh
+  padding-top: 4vh
+  .thumbnail
+    background-image: url('../img/contacts.png')
+  .container
+    overflow: hidden
+    .contacts_wrap
+      margin-top: 20px
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      flex-wrap: wrap
+      .number
+        width: 100%
+      .number,.mail,.vk
+        display: flex
+        align-items: center
+        & i
+          color: $accent
+          font-size: 40px
+          margin-right: 15px
+    .form_wrap
+      width: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+      .input_container
+        width: 100%
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        & input
+          width: 46.5%
+      & form
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: start
+        .form_btn
+          border: 2px solid $accent
+          background: $accent
+          color: $text
+          height: 75px
+          width: 200px
+          text-align: center
+          cursor: pointer
+          margin-top: 20px
+          transition: .5s
+          &:hover
+            background: transparent
+            color: $accent
+            border-color: $accent
+        & input
+          height: 77px
+          margin-bottom: 20px
+        & input, textarea
+          background: transparent
+          padding-left: 20px
+          border: 2px solid $accent
+          color: $accent
+          transition: .5s
+          @extend %text-reference
+          &::placeholder
+            color: $accent
+        & input[type="email"], textarea
+          width: 97.5%
+        & textarea
+          height: 24vh
+          max-height: 240px
+          padding-top: 20px
+          resize: none
+
+
+@import 'media'

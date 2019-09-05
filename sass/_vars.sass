@@ -1,0 +1,29 @@
+// цвета
+$bg: #687586
+$accent: #96b6ba
+$text: #fefbfb
+
+// шрифты
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600&display=swap')
+%text-300
+  font-family: 'Open Sans', sans-serif
+  font-weight: 300
+
+%text-600
+  font-family: 'Open Sans', sans-serif
+  font-weight: 600
+
+// стандарты текста
+%text-reference
+  @extend %text-300
+  line-height: 25pt
+  font-size: 24px
+  letter-spacing: 0.1em
+
+%title
+  @extend %text-600
+  font-size: 36px
+
+%subtitle
+  @extend %text-600
+  font-size: 30px

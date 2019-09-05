@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Преподаватель</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <!-- Normalize -->
+  <link rel="stylesheet" href="libs/normalize.css">
+  <!-- FancyBox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <!-- burger -->
+  <div id="burger">
+    <a><img src="img/menu.png" alt=""></a>
+  </div>
+
+  <div id="leftdrop">
+    <a id="close"><i class="fas fa-times"></i></a>
+  </div>
+  <!-- end burger -->
+
+  <!-- counter -->
+
+  <div id="counter" class="counter">
+    <a class="counter_up" onclick="countUp()"></a>
+    <div class="count counter_current" id="count"></div>
+    <a class="counter_down" onclick="countDown()"></a>
+  </div>
+
+  <!-- end counter -->
+  <section id="first">
+
+    <div class="first_bg">
+      <div class="first_avatar">
+        <img src="img/first_ava.png" alt="avatar">
+      </div>
+    </div>
+
+    <div class="first_title">
+      <h1>
+        Никифорова Ульяна Александровна
+      </h1>
+      <div class="first_title-line"></div>
+      <h2 class="first_description">
+        Преподаватель
+      </h2>
+    </div>
+
+    <div class="first_blockquote">
+      <p>Учись постоянно.Всегда можно выучить “что-то ещё”.</p>
+      <p>©Стив Джобс</p>
+    </div>
+
+  </section>
+
+  <section id="about">
+    <div class="thumbnail"></div>
+    <div class="container">
+      <h2>Обо мне</h2>
+      <div class="about_wrap">
+        <div class="education">
+          <div>
+            <span>Образование:</span>
+            высшее <br>
+            Нижегородский государственный университет <br>
+            им. Н.И. Лобачевского, 2001г.
+          </div>
+        </div>
+        <div class="teach_exp">
+          <div>
+            <span>Педагогический стаж работы:</span>
+            с 01.11.1999г.
+          </div>
+        </div>
+        <div class="tech_exp">
+          <div>
+            <span>Стаж работы в техникуме:</span>
+            с 01.09.2011г.
+          </div>
+        </div>
+        <div class="category">
+          <div>
+            <span>Категория:</span>
+            высшая квалификационная категория
+          </div>
+        </div>
+        <div class="training">
+          <div>
+            <span>Повышение квалификации:</span>
+            <ul>
+              <li>2016–программа «Подготовка экспертов, участвующих в
+                процедуре государственной аккредитации образовательной
+                деятельности»</li>
+              <li>2018–Технология разработки учебных планов по наиболее
+                востребованным профессиям и специальностям
+                по (ТОП-50)</li>
+              <li>2018–Практика и методика подготовки кадров по
+                профессии «Разработчик Web и мультимедийных
+                приложений» с учетом стандартов Вордскиллс
+                Россия по компетенции «Веб-дизайн и разработка»</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="subjects">
+    <div class="thumbnail"></div>
+    <div class="container">
+      <h2>Дисциплины, которые я веду</h2>
+      <div class="subject_wrap">
+        <div class="subject">
+          <div class="icon"></div>
+          <div class="subject_title">
+            Инструментальные средства разработки ПО
+          </div>
+        </div>
+        <div class="subject">
+          <div class="icon"></div>
+          <div class="subject_title">
+            Теория алгоритмов
+          </div>
+        </div>
+        <div class="subject">
+          <div class="icon"></div>
+          <div class="subject_title">
+            Технология разработки ПО
+          </div>
+        </div>
+        <div class="subject">
+          <div class="icon"></div>
+          <div class="subject_title">
+            Информационные технологии
+          </div>
+        </div>
+        <div class="subject">
+          <div class="icon"></div>
+          <div class="subject_title">
+            Теоретические и практические основы
+            профессии “Оператор ЭВМ”
+          </div>
+        </div>
+        <div class="subject">
+          <div class="icon"></div>
+          <div class="subject_title">
+            Технология разработки базы данных
+          </div>
+        </div>
+        <div class="subject">
+          <div class="icon"></div>
+          <div class="subject_title">
+            Инфокоммуникационные системы и сети
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="awards">
+    <div class="thumbnail"></div>
+    <div class="container">
+      <h2>Награды</h2>
+      <div class="filter_container">
+        <div class="dropdown">
+          <button class="dropbtn">Фильтры</button>
+          <div class="dropdown-content">
+            <button type="button" data-filter="all">Все</button>
+            <button type="button" data-filter=".my_awards">Мои достижения</button>
+            <button type="button" data-filter=".leadership">Классное руководство</button>
+          </div>
+        </div>
+      </div>
+      <div class="awards_wrap">
+        <!-- классное руководство -->
+        <a class="award mix leadership" data-order="1" href="img/leadership/3bsfPoCJRtA.jpg" data-fancybox>
+          <img src="img/leadership/3bsfPoCJRtA.jpg" alt="Награда, которая не загрузилась">
+        </a>
+
+        <a class="award mix leadership" data-order="2" href="img/leadership/4EYlfUItjdM.jpg" data-fancybox>
+          <img src="img/leadership/4EYlfUItjdM.jpg" alt="Награда, которая не загрузилась">
+        </a>
+
+        <a class="award mix leadership" href="img/leadership/HpNs-GEyqr4.jpg" data-fancybox>
+          <img src="img/leadership/HpNs-GEyqr4.jpg" alt="Награда, которая не загрузилась">
+        </a>
+
+        <a class="award mix leadership" href="img/leadership/JytVQI2Bhvg.jpg" data-fancybox>
+          <img src="img/leadership/JytVQI2Bhvg.jpg" alt="Награда, которая не загрузилась">
+        </a>
+
+        <a class="award mix leadership" href="img/leadership/KIM_Teoria_alg.png" data-fancybox>
+          <img src="img/leadership/KIM_Teoria_alg.png" alt="Награда, которая не загрузилась">
+        </a>
+
+        <a class="award mix leadership" href="img/leadership/mISscdb9nyc.jpg" data-fancybox>
+          <img src="img/leadership/mISscdb9nyc.jpg" alt="Награда, которая не загрузилась">
+        </a>
+
+        <a class="award mix leadership" href="img/leadership/Nikiforova_Ulyana_Alexandrovna_-_svidetelstvo.png"
+          data-fancybox>
+          <img src="img/leadership/Nikiforova_Ulyana_Alexandrovna_-_svidetelstvo.png"
+            alt="Награда, которая не загрузилась">
+        </a>
+
+        <a class="award mix leadership" href="img/leadership/pQ-iG2KGQU4.jpg" data-fancybox>
+          <img src="img/leadership/pQ-iG2KGQU4.jpg" alt="Награда, которая не загрузилась">
+        </a>
+
+        <a class="award mix leadership" href="img/leadership/QkDp7v8n6nU.jpg" data-fancybox>
+          <img src="img/leadership/QkDp7v8n6nU.jpg" alt="Награда, которая не загрузилась">
+        </a>
+
+        <a class="award mix leadership" href="img/leadership/x1mdy2Mp0Vo.jpg" data-fancybox>
+          <img src="img/leadership/x1mdy2Mp0Vo.jpg" alt="Награда, которая не загрузилась">
+        </a>
+
+        <a class="award mix leadership" href="img/leadership/Screenshot_1.png" data-fancybox>
+          <img src="img/leadership/Screenshot_1.png" alt="Награда, которая не загрузилась">
+        </a>
+
+        <a class="award mix leadership" href="img/leadership/Screenshot_2.png" data-fancybox>
+          <img src="img/leadership/Screenshot_2.png" alt="Награда, которая не загрузилась">
+        </a>
+
+        <a class="award mix leadership" href="img/leadership/Screenshot_3.png" data-fancybox>
+          <img src="img/leadership/Screenshot_3.png" alt="Награда, которая не загрузилась">
+        </a>
+
+        <a class="award mix leadership" href="img/leadership/Screenshot_4.png" data-fancybox>
+          <img src="img/leadership/Screenshot_4.png" alt="Награда, которая не загрузилась">
+        </a>
+
+        <!-- Мои достижения -->
+
+        <a class="award mix my_awards" href="img/myAwards/B2S5WAwfVKI.jpg" data-fancybox>
+          <img src="img/myAwards/B2S5WAwfVKI.jpg" alt="Награда, которая не загрузилась">
+        </a>
+
+        <a class="award mix my_awards" href="img/myAwards/cKS5OVK5wYU.jpg" data-fancybox>
+          <img src="img/myAwards/cKS5OVK5wYU.jpg" alt="Награда, которая не загрузилась">
+        </a>
+
+        <a class="award mix my_awards" href="img/myAwards/lnhhbl6Zg9Y.jpg" data-fancybox>
+          <img src="img/myAwards/lnhhbl6Zg9Y.jpg" alt="Награда, которая не загрузилась">
+        </a>
+
+        <a class="award mix my_awards" href="img/myAwards/Nikiforova_U_A_Vebinar_S_R.jpg" data-fancybox>
+          <img src="img/myAwards/Nikiforova_U_A_Vebinar_S_R.jpg" alt="Награда, которая не загрузилась">
+        </a>
+
+        <a class="award mix my_awards" href="img/myAwards/Publikatsia_RP_03_01_may_2018.png" data-fancybox>
+          <img src="img/myAwards/Publikatsia_RP_03_01_may_2018.png" alt="Награда, которая не загрузилась">
+        </a>
+
+        <a class="award mix my_awards" href="img/myAwards/r3GFzwwds_U.jpg" data-fancybox>
+          <img src="img/myAwards/r3GFzwwds_U.jpg" alt="Награда, которая не загрузилась">
+        </a>
+
+        <a class="award mix my_awards" href="img/myAwards/Screenshot_1ф.png" data-fancybox>
+          <img src="img/myAwards/Screenshot_1ф.png" alt="Награда, которая не загрузилась">
+        </a>
+
+        <a class="award mix my_awards" href="img/myAwards/Screenshot_2a.png" data-fancybox>
+          <img src="img/myAwards/Screenshot_2a.png" alt="Награда, которая не загрузилась">
+        </a>
+
+        <a class="award mix my_awards" href="img/myAwards/Screenshot_3a.png" data-fancybox>
+          <img src="img/myAwards/Screenshot_3a.png" alt="Награда, которая не загрузилась">
+        </a>
+
+        <a class="award mix my_awards" href="img/myAwards/Screenshot_4й.png" data-fancybox>
+          <img src="img/myAwards/Screenshot_4й.png" alt="Награда, которая не загрузилась">
+        </a>
+
+        <a class="award mix my_awards" href="img/myAwards/Screenshot_5а.png" data-fancybox>
+          <img src="img/myAwards/Screenshot_5а.png" alt="Награда, которая не загрузилась">
+        </a>
+
+        <a class="award mix my_awards" href="img/myAwards/Screenshot_6а.png" data-fancybox>
+          <img src="img/myAwards/Screenshot_6а.png" alt="Награда, которая не загрузилась">
+        </a>
+
+        <a class="award mix my_awards" href="img/myAwards/u0t_DPMSxc8.jpg" data-fancybox>
+          <img src="img/myAwards/u0t_DPMSxc8.jpg" alt="Награда, которая не загрузилась">
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="files">
+    <div class="thumbnail"></div>
+    <div class="container">
+      <h2>Файлы</h2>
+      <div class="filter_container">
+        <div class="dropdown">
+          <button class="dropbtn">Фильтры</button>
+          <div class="dropdown-content">
+            <button type="button" data-filter="all">Все</button>
+            <button type="button" data-filter=".it">Информационные технологии</button>
+            <button type="button" data-filter=".lesson_presentations">Презентации уроков</button>
+            <button type="button" data-filter=".mdk0301">МДК 03.01</button>
+            <button type="button" data-filter=".programming">Программирование</button>
+            <button type="button" data-filter=".theory_of_algorithms">Теория алгоритмов</button>
+          </div>
+        </div>
+      </div>
+      <div class="files_wrap">
+        <!-- IT -->
+        <div class="file mix it">
+          <a href="files/it/mietodichieskaia-razrabotka-binarnogho-uroka-sozda.docx" download>
+            <img src="img/download.png" alt="Скачать">
+          </a>
+          <p class="filename">
+            Методическая разработка бинарного урока «Создание буклетов на английском языке с использованием
+            Интернет-ресурсов»
+          </p>
+        </div>
+
+        <div class="file mix it">
+          <a href="files/it/praktichieskaia-rabota-vstavka-simvolov-po-uchiebnoi-distsiplinie-informatsionnyie-tiekhnologhii-dlia-spietsial-nosti-09-02-03-proghrammirovaniie-v-komp-iutiernykh-sistiemakh.doc"
+            download>
+            <img src="img/download.png" alt="Скачать">
+          </a>
+          <p class="filename">
+            Практическая работа "Вставка символов" по учебной дисциплине "Информационные технологии" для специальности
+            09.02.03
+            "Программирование в компьютерных системах"
+          </p>
+        </div>
+        <!-- mdk0301 -->
+        <div class="file mix mdk0301">
+          <a href="files/mdk0301/metodicheskie-ukazaniia-po-vypolneniiu-praktich-11.DOC" download>
+            <img src="img/download.png" alt="Скачать">
+          </a>
+          <p class="filename">
+            Методические указания по выполнению практической работы №2 по МДК.03.01. Технология разработки программного
+            обеспечения
+            специальности 09.02.03 Программирование в компьютерных системах
+          </p>
+        </div>
+
+        <div class="file mix mdk0301">
+          <a href="files/mdk0301/metodicheskie-ukazaniia-po-vypolneniiu-praktich-10.DOC" download>
+            <img src="img/download.png" alt="Скачать">
+          </a>
+          <p class="filename">
+            Методические указания по выполнению практической работы №1 по МДК.03.01. Технология разработки программного
+            обеспечения
+            специальности 09.02.03 Программирование в компьютерных системах
+          </p>
+        </div>
+        <!-- lesson presentations -->
+        <div class="file mix lesson_presentations">
+          <a href="files/lesson presentations/priezientatsiia-po-distsiplinie-informatsionnyie-t.rar" download>
+            <img src="img/download.png" alt="Скачать">
+          </a>
+          <p class="filename">
+            Презентация по дисциплине информационные технологии "Искусственный интеллект
+          </p>
+        </div>
+
+        <div class="file mix lesson_presentations">
+          <a href="files/lesson presentations/Специальность09.02.03 Программирование в компьютерных системах.docx"
+            download>
+            <img src="img/download.png" alt="Скачать">
+          </a>
+          <p class="filename">
+            Специальность 09.02.03 «Программирование в компьютерных системах»
+          </p>
+        </div>
+
+        <div class="file mix lesson_presentations">
+          <a href="files/lesson presentations/Информатизация общества.docx" download>
+            <img src="img/download.png" alt="Скачать">
+          </a>
+          <p class="filename">
+            Информатизация общества
+          </p>
+        </div>
+        <!-- programming -->
+        <div class="file mix programming">
+          <a href="files/programming/Презентация к уроку Одномерные массивы.docx" download>
+            <img src="img/download.png" alt="Скачать">
+          </a>
+          <p class="filename">
+            Презентация к уроку "Одномерные массивы"
+          </p>
+        </div>
+        <!-- theory of algorithms -->
+        <div class="file mix theory_of_algorithms">
+          <a href="files/theory of algorithms/komplekt-kontrolno-izmeritelnykh-materialov-po-u-3.doc" download>
+            <img src="img/download.png" alt="Скачать">
+          </a>
+          <p class="filename">
+            Комплект контрольно-измерительных материалов по учебной дисциплине оп.08. теория алгоритмов
+          </p>
+        </div>
+
+        <div class="file mix theory_of_algorithms">
+          <a href="files/theory of algorithms/metodicheskie-ukazaniia-po-vypolneniiu-praktich-13.DOCX" download>
+            <img src="img/download.png" alt="Скачать">
+          </a>
+          <p class="filename">
+            Методические указания по выполнению практических и лабораторных работ по оп.08. теория алгоритмов
+          </p>
+        </div>
+
+        <div class="file mix theory_of_algorithms">
+          <a href="files/theory of algorithms/rabochaia-proghramma-po-distsiplinie-tieoriia-alghoritmov-dlia-spietsial-nosti-09-02-03-proghrammirovaniie-v-komp-iutiernykh-sistiemakh.doc"
+            download>
+            <img src="img/download.png" alt="Скачать">
+          </a>
+          <p class="filename">
+            Рабочая программа по дисциплине "Теория алгоритмов" для специальности 09.02.03 "Программирование в
+            компьютерных
+            системах"
+          </p>
+        </div>
+
+        <div class="file mix theory_of_algorithms">
+          <a href="files/theory of algorithms/uchiebnoie-posobiie-tieoriia-alghoritmov.doc" download>
+            <img src="img/download.png" alt="Скачать">
+          </a>
+          <p class="filename">
+            Учебное пособие "Теория алгоритмов"
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="container">
+      <h2>Галерея</h2>
+      <div class="photo_wrap">
+            <a href="img/gallery/-Q6eYY1dFCI.jpg" data-fancybox="images">
+              <img src="img/gallery/-Q6eYY1dFCI.jpg" alt="Фото не загрузилось">
+            </a>
+
+            <a href="img/gallery/1psG3fEIOr4.jpg" data-fancybox="images">
+              <img src="img/gallery/1psG3fEIOr4.jpg" alt="Фото не загрузилось">
+            </a>
+
+            <a href="img/gallery/0aXPAR4pyzQ.jpg" data-fancybox="images">
+              <img src="img/gallery/0aXPAR4pyzQ.jpg" alt="Фото не загрузилось">
+            </a>
+
+            <a href="img/gallery/2tXIOhXbwYE.jpg" data-fancybox="images">
+              <img src="img/gallery/2tXIOhXbwYE.jpg" alt="Фото не загрузилось">
+            </a>
+
+            <a href="img/gallery/3XL09EmhHvY.jpg" data-fancybox="images">
+              <img src="img/gallery/3XL09EmhHvY.jpg" alt="Фото не загрузилось">
+            </a>
+
+            <a href="img/gallery/2XQcksC58m8.jpg" data-fancybox="images">
+              <img src="img/gallery/2XQcksC58m8.jpg" alt="Фото не загрузилось">
+            </a>
+
+            <a href="img/gallery/ITJiOKoy-Ww.jpg" data-fancybox="images">
+              <img src="img/gallery/ITJiOKoy-Ww.jpg" alt="Фото не загрузилось">
+            </a>
+
+            <a href="img/gallery/fm-Mzln6WFE.jpg" data-fancybox="images">
+              <img src="img/gallery/fm-Mzln6WFE.jpg" alt="Фото не загрузилось">
+            </a>
+
+            <a href="img/gallery/GJTnRm53Oao.jpg" data-fancybox="images">
+              <img src="img/gallery/GJTnRm53Oao.jpg" alt="Фото не загрузилось">
+            </a>
+
+            <a href="img/gallery/HWqRiIPwanE.jpg" data-fancybox="images">
+              <img src="img/gallery/HWqRiIPwanE.jpg" alt="Фото не загрузилось">
+            </a>
+
+            <a href="img/gallery/J9ZWKeE7X1k.jpg" data-fancybox="images">
+              <img src="img/gallery/J9ZWKeE7X1k.jpg" alt="Фото не загрузилось">
+            </a>
+
+            <a href="img/gallery/n3kI-nQVTME.jpg" data-fancybox="images">
+              <img src="img/gallery/n3kI-nQVTME.jpg" alt="Фото не загрузилось">
+            </a>
+
+            <a href="img/gallery/bqLO0Aa2k70.jpg" data-fancybox="images">
+              <img src="img/gallery/bqLO0Aa2k70.jpg" alt="Фото не загрузилось">
+            </a>
+
+            <a href="img/gallery/n3EheyG3dGg.jpg" data-fancybox="images">
+              <img src="img/gallery/n3EheyG3dGg.jpg" alt="Фото не загрузилось">
+            </a>
+
+            <a href="img/gallery/oIXUBrdi8fo.jpg" data-fancybox="images">
+              <img src="img/gallery/oIXUBrdi8fo.jpg" alt="Фото не загрузилось">
+            </a>
+
+            <a href="img/gallery/qrQ4SOD7AEY.jpg" data-fancybox="images">
+              <img src="img/gallery/qrQ4SOD7AEY.jpg" alt="Фото не загрузилось">
+            </a>
+
+            <a href="img/gallery/sA20MAkMeKU.jpg" data-fancybox="images">
+              <img src="img/gallery/sA20MAkMeKU.jpg" alt="Фото не загрузилось">
+            </a>
+
+            <a href="img/gallery/VIw4MgzT5WQ.jpg" data-fancybox="images">
+              <img src="img/gallery/VIw4MgzT5WQ.jpg" alt="Фото не загрузилось">
+            </a>
+
+            <a href="img/gallery/wvQcZu9HbEo.jpg" data-fancybox="images">
+              <img src="img/gallery/wvQcZu9HbEo.jpg" alt="Фото не загрузилось">
+            </a>
+
+            <a href="img/gallery/банер6.jpg" data-fancybox="images">
+              <img src="img/gallery/банер6.jpg" alt="Фото не загрузилось">
+            </a>
+
+            <a href="img/gallery/8v6jvkVJJK0.jpg" data-fancybox="images">
+              <img src="img/gallery/8v6jvkVJJK0.jpg" alt="Фото не загрузилось">
+            </a>
+
+            <a href="img/gallery/etxdTnDmGT8.jpg" data-fancybox="images">
+              <img src="img/gallery/etxdTnDmGT8.jpg" alt="Фото не загрузилось">
+            </a>
+
+            <a href="img/gallery/YdAb2enQTA4.jpg" data-fancybox="images">
+              <img src="img/gallery/YdAb2enQTA4.jpg" alt="Фото не загрузилось">
+            </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts">
+    <div class="thumbnail"></div>
+    <div class="container">
+      <h2>Контакты</h2>
+      <div class="contacts_wrap">
+        <div class="number">
+          <i class="fas fa-phone-volume"></i>
+          <p>+7 915 952 87 91</p>
+        </div>
+        <div class="mail">
+          <i class="fas fa-envelope"></i>
+          <p>vip1998@mail.ru</p>
+        </div>
+        <div class="vk">
+          <i class="fab fa-vk"></i>
+          <a href="https://vk.com/id26680039" target="blank">Ссылка</a>
+        </div>
+      </div>
+      <div class="form_wrap">
+        <form action="" method="post">
+          <div class="input_container">
+            <input type="text" name="name" id="name" placeholder="Имя" required>
+            <input type="tel" name="phone" id="phone" placeholder="Телефон" pattern="+7 ([0-9]{3}([0-9]{3})([0-9]{2})([0-9]{2})" required>
+          </div>
+
+          <input type="email" name="email" id="e_mail" placeholder="E-MAIL" required>
+          <textarea name="message" id="message" placeholder="Ваше сообщение" cols="30" rows="10"></textarea>
+          <input class="form_btn" id="form_btn" name="button"  type="button" value="Отправить">
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- MixItUp -->
+  <script src="libs/mixitup.min.js"></script>
+  <!-- FancyBox -->
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <!-- truncate -->
+  <script src="libs/truncate.js"></script>
+
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

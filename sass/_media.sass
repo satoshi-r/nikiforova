@@ -1,0 +1,209 @@
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+  .block
+    font-family: Arial
+    position: relative
+    width: 460px
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px)
+  .column
+    flex: 50%
+    max-width: 50%
+  
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) 
+  .column 
+    flex: 100%
+    max-width: 100%
+
+// small monitors
+@media screen and (max-width: 1700px)
+  .container
+    width: 50vw
+    padding-right: 5px  
+
+@media screen and (max-width: 1440px)
+  .container
+    padding-left: 10px
+    width: 54vw
+    & h2
+      padding-left: 10px
+  .thumbnail
+    width: 34vw
+  #burger, #counter, #close
+    right: 40px
+  #contacts
+    & form input:not(.form_btn)
+      height: 50px !important
+    .input_container
+      flex-wrap: wrap 
+      & input
+        width: 100% !important
+
+@media screen and (max-width: 1200px)
+  body
+    font-size: 18px
+
+  h1
+    font-size: 30px
+
+@media screen and (max-width: 920px)
+  section:not(#contacts)
+    user-select: none
+
+  h2, h3
+    font-size: 24px
+
+  .container
+    width: 66vw
+    & h2
+      width: 70%
+
+  #gallery
+    .container
+      padding-top: 75px
+      padding-right: 3vw
+      padding-left: 3vw
+      .column
+        flex: 50% !important
+        max-width: 50% !important
+    & h2
+      margin: 0 auto  
+  
+  #contacts .container .form_wrap form textarea
+    height: 12vh
+
+  #counter
+    display: none
+
+  #about, #subjects, #awards, #files ,#contacts
+    padding: 0
+
+  .thumbnail
+    height: 100%
+
+@media screen and (max-width: 500px)
+  .thumbnail
+    width: 100vw
+    position: fixed
+    z-index: -1
+    opacity: 0.1
+  
+  .container
+    width: 100%
+
+  #first .first_bg
+    height: 45vh
+    
+  h1, #first .first_title .first_description
+    font-size: 30px
+
+  #first .first_title .first_description
+    font-weight: 300
+
+  #first .first_title .first_title-line
+    height: 3px
+    margin-bottom: 10px
+    margin-top: 10px
+    display: table
+
+  #first .first_blockquote
+    margin-top: 3vh
+    padding: 10px
+    position: absolute
+    bottom: 10px
+
+  #about .education, #about .teach_exp, #about .tech_exp, #about .category, #about .training
+    margin-left: 0
+
+  #subjects .subject_wrap
+    padding-left: 0
+    overflow-y: auto
+  
+  #subjects .subject_wrap .subject .icon
+    width: 40px
+    min-width: 40px
+    height: 40px
+
+  #subjects .subject_wrap .subject
+    align-items: center
+
+  #subjects .subject_wrap .subject .subject_title
+    padding-left: 10px
+
+  .filter_container
+    padding-left: 0
+
+  .filter_container .dropdown .dropbtn
+    width: 310px
+
+  .filter_container .dropdown
+    margin: 0 auto
+
+  #awards .awards_wrap .award
+    width: 130px
+    height: 200px
+
+  #awards .awards_wrap
+    justify-content: center
+
+  #files .container .clearboth .truncate_more_link
+    font-size: 14px
+
+  #contacts .container .form_wrap form .form_btn
+    height: 60px !important
+    
+  #contacts .container .form_wrap form input, #contacts .container .form_wrap form textarea
+    font-size: 18px
+
+  #contacts .container .form_wrap form textarea
+    padding-top: 5px
+    height: 9vh
+
+  #contacts form input:not(.form_btn)
+    height: 38px !important
+
+@media screen and (max-width: 380px)
+  body
+    font-size: 14px
+
+  h2, h3
+    font-size: 18px
+
+  #first img
+    width: 140px
+
+  #leftdrop .menu-item
+    font-size: 22px
+
+  #first .first_title
+    margin-top: 80px
+
+  h1, #first .first_title .first_description
+    font-size: 18px
+
+  #first .first_blockquote
+    margin-top: 0
+    & p
+      font-size: 14px
+    
+  #first .first_title .first_title-line
+    margin: 0 auto
+
+  #about .education ul, #about .teach_exp ul, #about .tech_exp ul, #about .category ul, #about .training ul
+    margin-left: 25px
+
+  #about .education, #about .teach_exp, #about .tech_exp, #about .category, #about .training
+    margin-top: 10
+
+  #subjects .subject_wrap
+    padding: 0
+
+  #about .education, #about .teach_exp, #about .tech_exp, #about .category, #about .training
+    margin-top: 10px
+
+  .filter_container .dropdown .dropbtn
+    width: 250px
+
+  #contacts .container .contacts_wrap .number i, #contacts .container .contacts_wrap .mail i, #contacts .container .contacts_wrap .vk i
+    font-size: 24px
