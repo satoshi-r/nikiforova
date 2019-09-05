@@ -45,7 +45,7 @@ $(document).ready(function () {
     lessText: 'Скрыть',
     ellipsisText: " ..."
   });
-  // Свайп
+  // Свайпы
   var mediaQuery = window.matchMedia("screen and (max-width: 920px)");
   mediaQuery.addListener(foo);
   foo(mediaQuery);

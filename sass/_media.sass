@@ -1,21 +1,3 @@
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
-  .block
-    font-family: Arial
-    position: relative
-    width: 460px
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px)
-  .column
-    flex: 50%
-    max-width: 50%
-  
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) 
-  .column 
-    flex: 100%
-    max-width: 100%
-
 // small monitors
 @media screen and (max-width: 1700px)
   .container
@@ -112,6 +94,7 @@
     padding: 10px
     position: absolute
     bottom: 10px
+    line-height: normal
 
   #about .education, #about .teach_exp, #about .tech_exp, #about .category, #about .training
     margin-left: 0
