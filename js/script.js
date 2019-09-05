@@ -45,7 +45,28 @@ $(document).ready(function () {
     lessText: 'Скрыть',
     ellipsisText: " ..."
   });
-  
+  // Свайп
+  var mediaQuery = window.matchMedia("screen and (max-width: 920px)");
+  mediaQuery.addListener(foo);
+  foo(mediaQuery);
+
+  function foo(mq) {
+    if (mq.matches) {
+      $("section").swipe({
+        //Generic swipe handler for all directions
+        swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+          if (direction == 'right') {
+            countUp();
+          }
+          if (direction == 'left') {
+            countDown();
+          }
+        },
+      });
+    }
+    return false;
+  }
+ 
 
   // AJAX
   $('#form_btn').on("click", function () {
@@ -189,25 +210,3 @@ function selectItem() {
   setMenuItem(count - 1);
   
 })();
-
-// Свайп
-var mediaQuery = window.matchMedia("screen and (max-width: 920px)");
-mediaQuery.addListener(foo);
-foo(mediaQuery);
-
-function foo(mq) {
-  if (mq.matches) {
-    $("section").swipe({
-      //Generic swipe handler for all directions
-      swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-        if (direction == 'right') {
-          countUp();
-        }
-        if (direction == 'left') {
-          countDown();
-        }
-      },
-    });
-  }
-  return false;
-}
