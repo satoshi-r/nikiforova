@@ -919,6 +919,38 @@ section {
   resize: none;
 }
 
+#dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  bottom: 20px;
+  padding: 0px 30vw;
+}
+
+#dots .current {
+  background-color: #96b6ba;
+  width: 5px;
+  height: 5px;
+}
+
+#dots a {
+  cursor: pointer;
+  width: 3px;
+  height: 3px;
+  background-color: #fefbfb;
+  opacity: 0.8;
+  border-radius: 50%;
+}
+
 @media screen and (max-width: 1700px) {
   .container {
     width: 50vw;

@@ -203,10 +203,21 @@ function selectItem() {
   setMenuItem(event.target.value);
 }
 
+function setDots() {
+  let dots = document.getElementById('dots'),
+    dots_item = document.querySelectorAll("#dots > a")[0];
+  
+  for (let i = 0; i < dots.childNodes.length; i++) {
+    console.log(dots.childNodes[i]);    
+  }
+  
+
+}
 (function initialization() {
 
   setMenu();
   setCount();
   setMenuItem(count - 1);
-  
+  setDots();
 })();
+
