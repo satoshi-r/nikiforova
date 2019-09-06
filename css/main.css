@@ -747,7 +747,6 @@ section {
 }
 
 #gallery .container .photo_wrap a img {
-  margin-top: 8px;
   vertical-align: middle;
   width: 100%;
   height: 100%;
@@ -869,6 +868,7 @@ section {
   margin-top: 20px;
   -webkit-transition: .5s;
   transition: .5s;
+  padding: 0;
 }
 
 #contacts .container .form_wrap form .form_btn:hover {
@@ -977,7 +977,7 @@ section {
     width: 70%;
   }
   #gallery .container {
-    padding-top: 75px;
+    padding-top: 30px;
     padding-right: 3vw;
     padding-left: 3vw;
   }
@@ -987,8 +987,8 @@ section {
             flex: 50% !important;
     max-width: 50% !important;
   }
-  #gallery h2 {
-    margin: 0 auto;
+  #gallery .container h2 {
+    text-align: left;
   }
   #contacts .container .form_wrap form textarea {
     height: 12vh;
@@ -1004,6 +1004,18 @@ section {
   }
 }
 
+@media screen and (max-width: 768px) {
+  #gallery .container .photo_wrap {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #gallery .container .photo_wrap a {
+    margin-right: initial;
+    width: 230px;
+    height: 170px;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .thumbnail {
     width: 100vw;
@@ -1013,6 +1025,13 @@ section {
   }
   .container {
     width: 100%;
+    padding-top: 25px;
+    padding-bottom: 0;
+    padding-left: 5px;
+    line-height: normal;
+  }
+  .container h2 {
+    margin-bottom: 15px;
   }
   #first .first_bg {
     height: 45vh;
@@ -1033,8 +1052,11 @@ section {
     margin-top: 3vh;
     padding: 10px;
     position: absolute;
-    bottom: 10px;
+    bottom: 30px;
     line-height: normal;
+  }
+  #about .about_wrap {
+    height: 85%;
   }
   #about .education, #about .teach_exp, #about .tech_exp, #about .category, #about .training {
     margin-left: 0;
@@ -1042,6 +1064,16 @@ section {
   #subjects .subject_wrap {
     padding-left: 0;
     overflow-y: auto;
+    max-height: 81%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   #subjects .subject_wrap .subject .icon {
     width: 40px;
@@ -1052,6 +1084,7 @@ section {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-bottom: 30px;
   }
   #subjects .subject_wrap .subject .subject_title {
     padding-left: 10px;
@@ -1067,15 +1100,31 @@ section {
   }
   #awards .awards_wrap .award {
     width: 130px;
-    height: 200px;
+    margin-bottom: 10px;
   }
   #awards .awards_wrap {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    max-height: 75%;
   }
   #files .container .clearboth .truncate_more_link {
     font-size: 14px;
+  }
+  #files .container .files_wrap {
+    max-height: 75%;
+  }
+  #files .container .file a {
+    min-width: 26px;
+    margin-right: 10px;
+  }
+  #files .container .file a img {
+    width: 100%;
+  }
+  #gallery .container {
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 25px;
   }
   #contacts .container .form_wrap form .form_btn {
     height: 60px !important;
@@ -1124,16 +1173,23 @@ section {
     margin-left: 25px;
   }
   #about .education, #about .teach_exp, #about .tech_exp, #about .category, #about .training {
-    margin-top: 10;
+    margin-top: 0;
+    margin-bottom: 10px;
   }
   #subjects .subject_wrap {
     padding: 0;
   }
-  #about .education, #about .teach_exp, #about .tech_exp, #about .category, #about .training {
-    margin-top: 10px;
+  .filter_container {
+    padding-left: 10px;
+    padding-top: 0;
+  }
+  .filter_container .dropdown {
+    margin: initial;
   }
   .filter_container .dropdown .dropbtn {
-    width: 250px;
+    width: 210px;
+    height: 38px;
+    background-size: 18px;
   }
   #contacts .container .contacts_wrap .number i, #contacts .container .contacts_wrap .mail i, #contacts .container .contacts_wrap .vk i {
     font-size: 24px;
