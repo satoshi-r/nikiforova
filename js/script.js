@@ -186,6 +186,7 @@ function countDown() {
     count++;
     setCount();
     setMenuItem(count - 1);
+    setDots();
   }
 }
 
@@ -194,30 +195,30 @@ function countUp() {
     count--;
     setCount();
     setMenuItem(count - 1);
+    setDots();
   }
 }
 
 function selectItem() {
   count = event.target.index + 1;
   setCount();
+  setDots();
   setMenuItem(event.target.value);
 }
 
 function setDots() {
-  let dots = document.getElementById('dots'),
-    dots_item = document.querySelectorAll("#dots > a")[0];
-  
-  for (let i = 0; i < dots.childNodes.length; i++) {
-    console.log(dots.childNodes[i]);    
+  let dots_item = document.querySelectorAll("#dots > div");
+  for (let i = 0; i < dots_item.length; i++) {
+    dots_item[i].classList.remove('dot_current');   
   }
-  
-
+  dots_item[count - 1].classList.add('dot_current');
 }
+
 (function initialization() {
 
   setMenu();
   setCount();
   setMenuItem(count - 1);
-  setDots();
+
 })();
 
