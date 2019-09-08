@@ -66,10 +66,10 @@ $(document).ready(function () {
         // },
       });
       function leftSwipe(event) {
-        countUp();
+        countDown();
       }
       function rightSwipe(event) {
-        countDown();
+        countUp();
       }
     }
     return false;
