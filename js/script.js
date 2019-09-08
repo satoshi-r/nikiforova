@@ -46,26 +46,34 @@ $(document).ready(function () {
     ellipsisText: " ..."
   });
   // Свайпы
-  // var mediaQuery = window.matchMedia("screen and (max-width: 920px)");
-  // mediaQuery.addListener(foo);
-  // foo(mediaQuery);
+  var mediaQuery = window.matchMedia("screen and (max-width: 920px)");
+  mediaQuery.addListener(foo);
+  foo(mediaQuery);
 
-  // function foo(mq) {
-  //   if (mq.matches) {
-  //     $("section").swipe({
-  //       //Generic swipe handler for all directions
-  //       swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-  //         if (direction == 'right') {
-  //           countUp();
-  //         }
-  //         if (direction == 'left') {
-  //           countDown();
-  //         }
-  //       },
-  //     });
-  //   }
-  //   return false;
-  // }
+  function foo(mq) {
+    if (mq.matches) {
+      $("section").swipe({
+        swipeLeft: leftSwipe,
+        swipeRight: rightSwipe,
+        threshold: 3
+        // swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+        //   if (direction == 'right') {
+        //     countUp();
+        //   }
+        //   if (direction == 'left') {
+        //     countDown();
+        //   }
+        // },
+      });
+      function leftSwipe(event) {
+        countUp();
+      }
+      function rightSwipe(event) {
+        countDown();
+      }
+    }
+    return false;
+  }
  
   
   // AJAX
