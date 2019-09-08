@@ -1102,6 +1102,7 @@ section {
   #subjects .subject_wrap {
     padding-left: 0;
     overflow-y: auto;
+    height: initial;
     max-height: 81%;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
