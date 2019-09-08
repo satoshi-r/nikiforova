@@ -65,17 +65,8 @@ h2, h3
   100%
     opacity: 1
 
-@keyframes fade_out
-  0%
-    opacity: 1
-  100%
-    opacity: 0
-
 .fade_in
   animation: fade_in 1s ease-in
-
-.fade_out
-  animation: fade_out 1s ease-out
 
 .hidden
   display: none !important
@@ -294,6 +285,8 @@ section
     margin-top: 5vh
     p
       margin: 0
+    & p:first-child
+      margin-bottom: 5px
 
 // Обо мне
 
@@ -432,7 +425,7 @@ section
     .photo_wrap
       margin-top: 35px
       overflow-y: scroll !important
-      height: 78vh
+      max-height: 78vh
       display: flex
       flex-direction: row
       flex-wrap: wrap
