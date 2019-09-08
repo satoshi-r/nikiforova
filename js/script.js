@@ -56,14 +56,6 @@ $(document).ready(function () {
         swipeLeft: leftSwipe,
         swipeRight: rightSwipe,
         threshold: 3
-        // swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-        //   if (direction == 'right') {
-        //     countUp();
-        //   }
-        //   if (direction == 'left') {
-        //     countDown();
-        //   }
-        // },
       });
       function leftSwipe(event) {
         countDown();
