@@ -1134,11 +1134,12 @@ section {
   #files .container .files_wrap {
     max-height: 70%;
   }
-  #files .container .file a {
+  #files .container .file a:not(.truncate_more_link) {
+    width: 26px;
     min-width: 26px;
     margin-right: 10px;
   }
-  #files .container .file a img {
+  #files .container .file a:not(.truncate_more_link) img {
     width: 100%;
   }
   #gallery .container {
