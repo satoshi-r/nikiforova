@@ -1055,9 +1055,6 @@ section {
   #first .first_bg {
     height: 33vh;
   }
-  h1, #first .first_title {
-    margin-bottom: auto;
-  }
   h1 .first_description, #first .first_title .first_description {
     font-size: 30px;
   }
@@ -1072,7 +1069,6 @@ section {
   }
   #first .first_blockquote {
     padding: 10px;
-    padding-bottom: 40px;
     line-height: normal;
   }
   #about .about_wrap {
