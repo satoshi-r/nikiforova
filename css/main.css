@@ -425,12 +425,10 @@ section {
   margin-bottom: 30px;
 }
 
-#first .first_title .first_title-line {
-  background: #96b6ba;
+#first .first_title i {
+  color: #96b6ba;
   margin: auto;
-  height: 2px;
-  width: 60px;
-  margin-bottom: 12px;
+  font-size: xx-large;
 }
 
 #first .first_blockquote {
