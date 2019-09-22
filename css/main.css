@@ -384,7 +384,7 @@ section {
 }
 
 #first .first_bg {
-  background-image: url("../img/header_bg.png");
+  background-image: url("../img/first.jpg");
   background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat;
@@ -803,6 +803,7 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 10px;
 }
 
 #contacts .container .form_wrap .input_container {
@@ -1033,6 +1034,9 @@ section {
     width: 230px;
     height: 170px;
   }
+  .filter_container .dropdown .dropbtn {
+    width: 310px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -1108,9 +1112,6 @@ section {
   }
   .filter_container {
     padding-left: 0;
-  }
-  .filter_container .dropdown .dropbtn {
-    width: 310px;
   }
   .filter_container .dropdown {
     margin: 0 auto;
