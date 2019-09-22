@@ -422,6 +422,7 @@ section {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 100px;
+  margin-bottom: 30px;
 }
 
 #first .first_title .first_title-line {
