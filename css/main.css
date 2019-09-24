@@ -1,12 +1,26 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,600&display=swap");
+@font-face {
+  font-family: 'Futura PT';
+  src: url("../fonts/FuturaPT-Heavy.eot");
+  src: local("Futura PT Heavy"), local("FuturaPT-Heavy"), url("../fonts/FuturaPT-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-Heavy.woff") format("woff"), url("../fonts/FuturaPT-Heavy.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Cyrl 300';
+  src: url("../fonts/MuseoCyrl-300.woff2") format("woff2"), url("../fonts/MuseoCyrl-300.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
 body, #contacts .container .form_wrap form input, #contacts .container .form_wrap form textarea, #about .education div span, #about .teach_exp div span, #about .tech_exp div span, #about .category div span, #about .training div span {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Museo Cyrl 300', sans-serif;
   font-weight: 300;
 }
 
 h1, #first .first_title .first_description, h2, h3 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
+  font-family: 'Futura PT', sans-serif;
+  font-weight: 900;
 }
 
 body, #contacts .container .form_wrap form input, #contacts .container .form_wrap form textarea {
