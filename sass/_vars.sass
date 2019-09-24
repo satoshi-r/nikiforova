@@ -1,9 +1,14 @@
-// цвета
+// Цвета
+// главная
 $bg: #687586
 $accent: #96b6ba
-$text: #fefbfb
+$text_white: #fefbfb
+// для блога
+$text_dark: #333a4e
+$blog_accent: #687586
+$blog_hover: #96b6ba
 
-// шрифты
+// Шрифты
 @font-face 
   font-family: 'Futura PT'
   src: url('../fonts/FuturaPT-Heavy.eot')
@@ -25,7 +30,7 @@ $text: #fefbfb
   font-family: 'Futura PT', sans-serif
   font-weight: 900
 
-// стандарты текста
+// Стандарты текста
 %text-reference
   @extend %text-light
   line-height: 25pt
@@ -40,8 +45,15 @@ $text: #fefbfb
   @extend %text-bold
   font-size: 30px
 
+// Тень
+%block_shadow
+  box-shadow: 0px 4px 10px rgba(104, 117, 134, 0.15)
+
+.hidden
+  display: none !important
+
 a
-  color: $text
+  color: $text_white
   text-decoration: none
   transition: .5s
   cursor: pointer

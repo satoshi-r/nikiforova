@@ -37,6 +37,10 @@ h2, h3 {
   font-size: 30px;
 }
 
+.hidden {
+  display: none !important;
+}
+
 a {
   color: #fefbfb;
   text-decoration: none;
@@ -133,10 +137,6 @@ h2, h3 {
 .fade_in {
   -webkit-animation: fade_in 1s ease-in;
           animation: fade_in 1s ease-in;
-}
-
-.hidden {
-  display: none !important;
 }
 
 section {
@@ -253,6 +253,8 @@ section {
 
 #leftdrop .menu-item:hover {
   opacity: 0.7;
+  -webkit-transition: initial;
+  transition: initial;
 }
 
 #close {

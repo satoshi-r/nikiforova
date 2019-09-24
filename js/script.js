@@ -120,10 +120,15 @@ var menuItems = [{
 
 function setMenu() {
   let menu = document.getElementById('leftdrop');
+  let blog_link = document.createElement('a');
+  blog_link.innerHTML = 'Блог';
+  blog_link.setAttribute('href', 'front-page.html');
+  blog_link.classList.add('menu-item');
   for (let i = 0; i < menuItems.length; i++) {
     let menuItem = createMenuItem(menuItems[i].label, menuItems[i].value, i);
     menu.appendChild(menuItem);
   }
+  menu.appendChild(blog_link);
 }
 
 function createMenuItem(item, value, index) {

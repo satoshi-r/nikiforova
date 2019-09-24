@@ -1,0 +1,45 @@
+@import 'vars'
+
+body
+  color: $text_dark
+  @extend %text-light
+  font-size: 18px
+  background: #F5F5F5
+  overflow: hidden !important
+  
+h1
+  @extend %text-bold
+  font-size: 30px
+
+h2
+  @extend %text-bold
+  font-size: 25px
+
+h3
+  @extend %text-bold
+  font-size: 20px
+
+@import 'media'
+
+.container
+  width: 100%
+  padding: 0 15px
+  margin-right: auto
+  margin-left: auto
+
+@media (min-width: 576px)
+  .container
+    max-width: 540px
+
+@media (min-width: 768px)
+  .container 
+    max-width: 720px
+  
+@media (min-width: 992px) 
+  .container 
+    max-width: 960px
+  
+@media (min-width: 1200px) 
+  .container 
+    max-width: 1140px
+  
