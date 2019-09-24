@@ -17,35 +17,25 @@ $text: #fefbfb
   font-weight: 200
   font-style: normal
 
-@font-face
-  font-family: 'Museo Cyrl 300'
-  src: url('../fonts/MuseoCyrl-300.woff2') format('woff2'), url('../fonts/MuseoCyrl-300.woff') format('woff')
-  font-weight: 300
-  font-style: normal
-
-%text-300
+%text-light
   font-family: 'Museo Cyrl 100', sans-serif
   font-weight: 200
 
 %text-bold
-  font-family: 'Museo Cyrl 300', sans-serif
-  font-weight: bold
-
-%text-600
   font-family: 'Futura PT', sans-serif
   font-weight: 900
 
 // стандарты текста
 %text-reference
-  @extend %text-300
+  @extend %text-light
   line-height: 25pt
   font-size: 24px
   letter-spacing: 0.1em
 
 %title
-  @extend %text-600
+  @extend %text-bold
   font-size: 36px
 
 %subtitle
-  @extend %text-600
+  @extend %text-bold
   font-size: 30px
