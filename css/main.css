@@ -37,12 +37,6 @@ h2, h3 {
   font-size: 30px;
 }
 
-body {
-  color: #fefbfb;
-  background: #687586;
-  overflow: hidden !important;
-}
-
 a {
   color: #fefbfb;
   text-decoration: none;
@@ -65,6 +59,12 @@ div {
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  color: #fefbfb;
+  background: #687586;
+  overflow: hidden !important;
 }
 
 h1 {
