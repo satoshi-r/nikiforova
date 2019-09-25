@@ -1,9 +1,9 @@
 // Цвета
-// главная
+// 1. главная
 $bg: #687586
 $accent: #96b6ba
 $text_white: #fefbfb
-// для блога
+// 2. для блога
 $text_dark: #333a4e
 $blog_accent: #687586
 $blog_hover: #96b6ba
@@ -16,15 +16,20 @@ $blog_hover: #96b6ba
   font-weight: 900
   font-style: normal
 
-@font-face
-  font-family: 'Museo Cyrl 100'
-  src: url('../fonts/MuseoCyrl-100.woff2') format('woff2'), url('../fonts/MuseoCyrl-100.woff') format('woff')
-  font-weight: 200
+@font-face 
+  font-family: 'Proxima Nova Lt'
+  src: url('../fonts/ProximaNova-Light.eot')
+  src: local('Proxima Nova Light'), local('ProximaNova-Light'),
+  url('../fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/ProximaNova-Light.woff') format('woff'),
+  url('../fonts/ProximaNova-Light.ttf') format('truetype')
+  font-weight: 300
   font-style: normal
 
+
 %text-light
-  font-family: 'Museo Cyrl 100', sans-serif
-  font-weight: 200
+  font-family: 'Proxima Nova Lt', sans-serif
+  font-weight: 300
 
 %text-bold
   font-family: 'Futura PT', sans-serif

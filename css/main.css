@@ -7,15 +7,16 @@
 }
 
 @font-face {
-  font-family: 'Museo Cyrl 100';
-  src: url("../fonts/MuseoCyrl-100.woff2") format("woff2"), url("../fonts/MuseoCyrl-100.woff") format("woff");
-  font-weight: 200;
+  font-family: 'Proxima Nova Lt';
+  src: url("../fonts/ProximaNova-Light.eot");
+  src: local("Proxima Nova Light"), local("ProximaNova-Light"), url("../fonts/ProximaNova-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Light.woff") format("woff"), url("../fonts/ProximaNova-Light.ttf") format("truetype");
+  font-weight: 300;
   font-style: normal;
 }
 
 body, #contacts .container .form_wrap form input, #contacts .container .form_wrap form textarea, #about .education div span, #about .teach_exp div span, #about .tech_exp div span, #about .category div span, #about .training div span {
-  font-family: 'Museo Cyrl 100', sans-serif;
-  font-weight: 200;
+  font-family: 'Proxima Nova Lt', sans-serif;
+  font-weight: 300;
 }
 
 h1, #first .first_title .first_description, h2, h3 {
