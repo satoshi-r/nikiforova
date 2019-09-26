@@ -145,12 +145,20 @@ header .container nav ul li a {
   -webkit-transition: 0.4s cubic-bezier(0, 0.8, 0, 1);
   transition: 0.4s cubic-bezier(0, 0.8, 0, 1);
   z-index: 2;
+  color: #fefbfb;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .search input:focus {
   width: 300px;
   z-index: 1;
-  border-bottom: 2px solid #fefbfb;
+  border-bottom: 1px solid #fefbfb;
+  cursor: initial;
+}
+
+.search input:focus + button {
+  z-index: 4;
 }
 
 .search button {
@@ -163,14 +171,14 @@ header .container nav ul li a {
   right: 0;
 }
 
-.search button:before {
-  content: url("../img/search.svg");
-  stroke: #fefbfb;
+.search button svg {
+  fill: #fefbfb;
   width: 18px;
   height: 18px;
   position: absolute;
   top: 0;
   right: 0;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1700px) {

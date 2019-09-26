@@ -65,10 +65,17 @@ header
     background: transparent
     transition: 0.4s cubic-bezier(0, 0.8, 0, 1)
     z-index: 2
+    color: $text_white
+    font-size: 16px
+    cursor: pointer
     &:focus
       width: 300px
       z-index: 1
-      border-bottom: 2px solid $text_white
+      border-bottom: 1px solid $text_white
+      cursor: initial
+      & + button
+        z-index: 4
+
   button
     background: transparent
     border: none
@@ -77,14 +84,14 @@ header
     cursor: pointer
     position: absolute
     right: 0
-    &:before
-      content: url('../img/search.svg')
-      stroke: $text_white
+    svg
+      fill: $text_white
       width: 18px
       height: 18px
       position: absolute
       top: 0
       right: 0
+      cursor: pointer
       
 
 
