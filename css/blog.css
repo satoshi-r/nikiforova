@@ -161,6 +161,16 @@ header .container nav ul li a {
   z-index: 4;
 }
 
+.search label svg {
+  fill: #fefbfb;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
 .search button {
   background: transparent;
   border: none;
