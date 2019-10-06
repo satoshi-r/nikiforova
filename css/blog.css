@@ -19,9 +19,30 @@ body {
   font-weight: 300;
 }
 
-h1, h2, .h2, h3 {
+h1, h2, .h2, h3, .page-content .container main .articles_container article .article_header .article_category-container a {
   font-family: 'Futura PT', sans-serif;
   font-weight: 900;
+}
+
+h1 {
+  line-height: normal;
+  letter-spacing: normal;
+  font-size: 30px;
+  margin: 0;
+}
+
+h2, .h2 {
+  line-height: normal;
+  letter-spacing: normal;
+  font-size: 25px;
+  margin: 0;
+}
+
+h3 {
+  line-height: normal;
+  letter-spacing: normal;
+  font-size: 25px;
+  margin: 0;
 }
 
 .page-content .container main .articles_container article, .page-content .container .sidebar aside {
@@ -61,22 +82,10 @@ body {
   color: #333a4e;
   font-size: 18px;
   background: #F5F5F5;
-  overflow: hidden !important;
 }
 
-h1 {
-  font-size: 30px;
-  margin: 0;
-}
-
-h2, .h2 {
-  font-size: 25px;
-  margin: 0;
-}
-
-h3 {
-  font-size: 20px;
-  margin: 0;
+a {
+  color: #333a4e;
 }
 
 a:hover {
@@ -90,6 +99,10 @@ header {
   position: fixed;
   z-index: 10;
   top: 0;
+}
+
+header a {
+  color: #fefbfb;
 }
 
 header .container {
@@ -213,7 +226,48 @@ header .container .search button svg {
 }
 
 .page-content .container main .articles_container article {
+  border-radius: 3px;
   background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.page-content .container main .articles_container article a:hover {
+  color: unset;
+}
+
+.page-content .container main .articles_container article h2 {
+  margin-bottom: 20px;
+}
+
+.page-content .container main .articles_container article .article_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.page-content .container main .articles_container article .article_header .date {
+  margin-right: 20px;
+}
+
+.page-content .container main .articles_container article .article_header .article_category-container a {
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+.page-content .container main .articles_container article .article_thumb {
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.page-content .container main .articles_container article .article_thumb:hover {
+  opacity: unset;
+}
+
+.page-content .container main .articles_container article .article_thumb img {
   width: 100%;
 }
 

@@ -1,29 +1,24 @@
 @import 'vars'
 
 body
-  color: $text_dark
   @extend %text-light
+  color: $text_dark
   font-size: 18px
   background: #F5F5F5
-  overflow: hidden !important
   
 h1
-  @extend %text-bold
-  font-size: 30px
-  margin: 0
+  @extend %blog-h1
 
 h2, .h2
-  @extend %text-bold
-  font-size: 25px
-  margin: 0
+  @extend %blog-h2
 
 h3
-  @extend %text-bold
-  font-size: 20px
-  margin: 0
+  @extend %blog-h3
 
-a:hover
-  color: $blog_hover
+a
+  color: $text_dark
+  &:hover
+    color: $blog_hover
   
 
 header
@@ -33,6 +28,8 @@ header
   position: fixed
   z-index: 10
   top: 0
+  a
+    color: $text_white
   .container
     display: flex
     flex-direction: row
@@ -110,8 +107,35 @@ header
         padding-top: 20px
         article
           @extend %block_shadow
+          border-radius: 3px
           background-color: #fff
-          width: 100%
+          padding: 20px
+          margin-bottom: 20px
+          a:hover
+            color: unset
+          h2
+            margin-bottom: 20px
+          .article_header
+            display: flex
+            .date
+              margin-right: 20px
+            .article_category-container
+              a
+                margin-right: 20px
+                @extend %text-bold
+                font-size: 18px
+          .article_thumb
+            margin-left: -20px
+            margin-right: -20px
+            margin-top: 30px
+            margin-bottom: 30px
+            display: block
+            &:hover
+              opacity: unset
+            img
+              width: 100%
+
+
           
     .sidebar
       width: 300px
