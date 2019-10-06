@@ -18,7 +18,7 @@ h3
 a
   color: $text_dark
   &:hover
-    color: $blog_hover
+    color: unset
   
 
 header
@@ -30,6 +30,8 @@ header
   top: 0
   a
     color: $text_white
+    &:hover
+      color: $text_white
   .container
     display: flex
     flex-direction: row
@@ -174,7 +176,7 @@ header
                 left: 0
                 height: 100%
                 width: 3px
-                background-color: $blog_hover
+                background-color: $accent
             a
               color: $text_dark
               display: flex

@@ -89,7 +89,7 @@ a {
 }
 
 a:hover {
-  color: #96b6ba;
+  color: unset;
 }
 
 header {
@@ -102,6 +102,10 @@ header {
 }
 
 header a {
+  color: #fefbfb;
+}
+
+header a:hover {
   color: #fefbfb;
 }
 
