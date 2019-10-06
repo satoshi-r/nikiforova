@@ -19,7 +19,7 @@ body {
   font-weight: 300;
 }
 
-h1, h2, .h2, h3, .page-content .container main .articles_container article .article_header .article_category-container a {
+h1, h2, .h2, h3, .page-content .container main .articles_container article .article_header .article_category-container a, .page-content .container main .load_more {
   font-family: 'Futura PT', sans-serif;
   font-weight: 900;
 }
@@ -271,6 +271,28 @@ header .container .search button svg {
   width: 100%;
 }
 
+.page-content .container main .load_more {
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 43px;
+  margin-bottom: 50px;
+}
+
+.page-content .container main .load_more:hover {
+  background-color: #fff;
+  color: unset;
+  opacity: unset;
+}
+
 .page-content .container .sidebar {
   width: 300px;
   padding-left: 10px;
@@ -333,6 +355,49 @@ header .container .search button svg {
 
 .page-content .container .sidebar aside ul li a:hover {
   opacity: 1;
+}
+
+footer {
+  background-color: #687586;
+  width: 100%;
+  height: 55px;
+  color: #fefbfb;
+}
+
+footer a {
+  color: #fefbfb;
+}
+
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .container .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: auto;
+}
+
+footer .container .logo img {
+  width: 45px;
+  height: 45px;
+  margin-right: 20px;
 }
 
 @media screen and (max-width: 1700px) {

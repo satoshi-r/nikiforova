@@ -134,8 +134,19 @@ header
               opacity: unset
             img
               width: 100%
-
-
+      .load_more
+        @extend %text-bold
+        font-size: 18px
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: 43px
+        margin-bottom: 50px
+        &:hover
+          background-color: #fff
+          color: unset
+          opacity: unset
           
     .sidebar
       width: 300px
@@ -175,6 +186,26 @@ header
               &:hover
                 opacity: 1
 
+footer
+  background-color: $blog_accent
+  width: 100%
+  height: 55px
+  color: $text_white
+  a
+    color: $text_white
+  .container
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    .logo
+      display: flex
+      align-items: center
+      margin-right: auto
+      & img
+        width: 45px
+        height: 45px
+        margin-right: 20px
 
 
 
