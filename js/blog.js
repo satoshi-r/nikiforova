@@ -6,13 +6,13 @@ $(document).ready(function () {
     $('.overlay').show();
     menu.css({
       'display': 'block',
-      'width': '300px',
+      'width': '300px'
     });
   });
 
   function closeMenu() {
     $('.overlay').hide();
-    menu.css({ 'width': '0' },
+    menu.css({ 'width': '0'},
       setTimeout(() => {
         menu.css({ 'display': 'none' });
       }, 400));

@@ -981,6 +981,9 @@ section {
   #contacts .input_container input {
     width: 100% !important;
   }
+  .blog h2 {
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -1055,6 +1058,9 @@ section {
   .thumbnail {
     height: 100%;
   }
+  .blog h2 {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1069,6 +1075,49 @@ section {
   }
   .filter_container .dropdown .dropbtn {
     width: 310px;
+  }
+  .blog header {
+    font-size: 14px;
+  }
+  .blog .container {
+    height: 100%;
+  }
+  .blog h1.title_feature {
+    font-size: 18px;
+  }
+  .blog h2 {
+    font-size: 22px;
+  }
+  .blog .article_header {
+    font-size: 16px;
+  }
+  .blog .article_header .article_category-container a {
+    font-size: 16px;
+    display: inline-block;
+  }
+  .blog .article_header .date {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .blog .article_preview {
+    display: block;
+    font-size: 16px;
+  }
+  .blog .load_more {
+    font-size: 16px;
+  }
+  .blog footer {
+    font-size: 14px;
+  }
+  .blog #leftdrop a {
+    font-size: 14px;
+  }
+  .blog #leftdrop h3 {
+    font-size: 20px;
   }
 }
 
