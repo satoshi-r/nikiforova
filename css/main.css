@@ -992,6 +992,22 @@ section {
   }
 }
 
+@media screen and (max-width: 992px) {
+  .sidebar {
+    display: none;
+  }
+  #burger {
+    display: block;
+  }
+  .page-content .container main {
+    width: 100%;
+    padding-right: 0;
+  }
+  .back-top {
+    right: 1%;
+  }
+}
+
 @media screen and (max-width: 920px) {
   section:not(#contacts) {
     -webkit-user-select: none;

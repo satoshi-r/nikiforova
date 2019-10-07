@@ -9,7 +9,12 @@ $(document).ready(function () {
   $('#close, .menu-item').click(function () {
     $('#leftdrop').slideUp();
   });
-
+  $(document).keydown(function (e) {
+    if (e.keyCode === 27) {
+      e.stopPropagation();
+      $('#leftdrop').slideUp();
+    }
+  });
 
   //Chrome Smooth Scroll
   try {
