@@ -2,6 +2,11 @@ $(document).ready(function () {
   // меню
   const menu = $('#leftdrop');
 
+  menu.find('.menu_category').click(function (e) {
+    menu.find('.menu_container').toggleClass('category_open');
+  });
+
+
   $('#burger a').click(function () {
     $('.overlay').show();
     menu.css({
@@ -19,7 +24,7 @@ $(document).ready(function () {
     return false;
   }
 
-  $('#leftdrop a, .overlay').click(function () {
+  $('#leftdrop a:not(.menu_category), .overlay').click(function () {
     closeMenu();
   });
 

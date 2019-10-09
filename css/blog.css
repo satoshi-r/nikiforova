@@ -212,13 +212,20 @@ a:hover {
   padding: 30px;
 }
 
+#leftdrop nav {
+  display: none;
+}
+
 #leftdrop h3 {
   font-size: 22px;
 }
 
+#leftdrop aside ul {
+  padding-top: 10px;
+}
+
 #leftdrop ul {
   list-style-type: none;
-  padding-top: 10px;
 }
 
 #leftdrop ul li {
@@ -643,6 +650,9 @@ footer .container .logo img {
   .back-top {
     right: 1%;
   }
+  header .container .search input:focus {
+    width: 160px;
+  }
 }
 
 @media screen and (max-width: 920px) {
@@ -713,6 +723,9 @@ footer .container .logo img {
   .blog header {
     font-size: 14px;
   }
+  .blog header nav {
+    display: none;
+  }
   .blog .container {
     height: 100%;
   }
@@ -750,8 +763,42 @@ footer .container .logo img {
   .blog #leftdrop a {
     font-size: 14px;
   }
+  .blog #leftdrop nav {
+    display: block;
+  }
+  .blog #leftdrop nav .menu_category svg {
+    width: 9px;
+    height: 9px;
+    fill: #fefbfb;
+    margin-left: 5px;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
   .blog #leftdrop h3 {
-    font-size: 20px;
+    display: none;
+  }
+  .blog #leftdrop aside {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: .4s;
+    transition: .4s;
+    margin: 0 -30px;
+  }
+  .blog #leftdrop aside ul {
+    padding: 0;
+  }
+  .blog #leftdrop aside ul li {
+    margin: 0;
+  }
+  .blog #leftdrop aside a {
+    padding: 0 40px;
+  }
+  .blog #leftdrop .category_open aside {
+    max-height: 300px;
+  }
+  .blog #leftdrop .category_open .menu_category svg {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
 }
 

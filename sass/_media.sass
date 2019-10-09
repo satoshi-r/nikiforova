@@ -46,6 +46,9 @@
   .back-top
     right: 1%
 
+  header .container .search input:focus
+    width: 160px
+
 @media screen and (max-width: 920px)
   section:not(#contacts)
     user-select: none
@@ -103,6 +106,8 @@
   .blog
     header
       font-size: 14px
+      nav
+        display: none
     .container
       height: 100%
     h1.title_feature
@@ -127,8 +132,33 @@
     #leftdrop
       a
         font-size: 14px
+      nav
+        display: block
+        .menu_category
+          svg
+            width: 9px
+            height: 9px
+            fill: $text_white
+            margin-left: 5px
+            transition: .4s
       h3
-        font-size: 20px
+        display: none
+      aside
+        max-height: 0
+        overflow: hidden
+        transition: .4s
+        margin: 0 -30px
+        ul
+          padding: 0
+          li
+            margin: 0
+        a
+          padding: 0 40px
+      .category_open
+        aside
+          max-height: 300px
+        .menu_category svg
+          transform: rotate(90deg)
 
 @media screen and (max-width: 500px)
   .thumbnail
