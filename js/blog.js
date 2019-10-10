@@ -2,28 +2,30 @@ $(document).ready(function () {
   // меню
   const menu = $('#leftdrop');
 
-  menu.find('.menu_category').click(function (e) {
-    menu.find('.menu_container').toggleClass('category_open');
-  });
-
-
-  $('#burger a').click(function () {
-    $('.overlay').show();
-    menu.css({
-      'display': 'block',
-      'width': '300px'
-    });
-  });
-
   function closeMenu() {
+    menu.find('#close').fadeOut(100);
     $('.overlay').hide();
-    menu.css({ 'width': '0'},
+    menu.css({ 'width': '0' },
       setTimeout(() => {
         menu.css({ 'display': 'none' });
       }, 400));
     return false;
   }
 
+  menu.find('.menu_category').click(function (e) {
+    menu.find('.menu_container').toggleClass('category_open');
+  });
+
+  $('#burger a').click(function () {
+    $('.overlay').show();
+    menu.css({
+      'display': 'block',
+      'width': '300px'
+    }, setTimeout(() => {
+      menu.find('#close').fadeIn();
+    }, 400));
+  });
+  
   $('#leftdrop a:not(.menu_category), .overlay').click(function () {
     closeMenu();
   });

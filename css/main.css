@@ -1079,8 +1079,15 @@ section {
   .filter_container .dropdown .dropbtn {
     width: 310px;
   }
+  .title_feature {
+    font-size: 18px;
+  }
+  .blog .page-content .container main .articles_container article .article_header .article_category-container a {
+    font-size: 16px;
+    display: inline-block;
+  }
   .blog header {
-    font-size: 14px;
+    font-size: 16px;
   }
   .blog header nav {
     display: none;
@@ -1088,18 +1095,11 @@ section {
   .blog .container {
     height: 100%;
   }
-  .blog h1.title_feature {
-    font-size: 18px;
-  }
   .blog h2 {
     font-size: 22px;
   }
   .blog .article_header {
     font-size: 16px;
-  }
-  .blog .article_header .article_category-container a {
-    font-size: 16px;
-    display: inline-block;
   }
   .blog .article_header .date {
     display: -webkit-box;
@@ -1120,7 +1120,7 @@ section {
     font-size: 14px;
   }
   .blog #leftdrop a {
-    font-size: 14px;
+    font-size: 16px;
   }
   .blog #leftdrop nav {
     display: block;
@@ -1283,6 +1283,9 @@ section {
   }
   #contacts form input:not(.form_btn) {
     height: 38px !important;
+  }
+  .blog header {
+    font-size: 14px;
   }
 }
 
