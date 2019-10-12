@@ -19,7 +19,7 @@ a
   color: $text_dark
   &:hover
     color: unset
-  
+
 .blog .container
   width: 100%
   padding: 0 15px
@@ -131,6 +131,7 @@ a
       width: 28px
 //end burger 
 .search
+  padding-left: 38px
   form
     height: 30px
     display: flex
@@ -139,23 +140,14 @@ a
   input
     height: 100%
     width: 0
-    padding: 0 18px 0 0px
+    // padding: 0 18px 0 0px
     border: none
-    border-bottom: 2px solid transparent
     outline: none
     background: transparent
     transition: 0.4s cubic-bezier(0, 0.8, 0, 1)
     z-index: 2
     color: $text_white
     font-size: 16px
-    cursor: pointer
-    &:focus
-      width: 300px
-      z-index: 1
-      border-bottom: 1px solid $text_white
-      cursor: initial
-      & + button
-        z-index: 4
   button
     background: transparent
     border: none
@@ -164,14 +156,25 @@ a
     cursor: pointer
     position: absolute
     right: 0
+  svg
+    fill: $text_white
+    width: 18px
+    height: 18px
+    position: absolute
+    top: 5px
+    right: 0
+    cursor: pointer
+  .search_clear
+    position: absolute
+    top: 5px
+    right: 0
+    cursor: pointer
+    display: none
+    z-index: 3
     svg
       fill: $text_white
-      width: 18px
-      height: 18px
-      position: absolute
-      top: 0
-      right: 0
-      cursor: pointer
+      width: 14px
+      height: 14px
 
 header
   background-color: $blog_accent
@@ -201,7 +204,7 @@ header
         list-style-type: none
         display: flex
 
-        & li a
+        & li:not(:last-child) a
           margin-right: 20px
     
 .page-content

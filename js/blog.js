@@ -1,4 +1,30 @@
 $(document).ready(function () {
+  // поиск
+  const search = $('input[name="search"]');
+
+  search.focus(function () {
+    $(this).css({
+      'padding': '0 18px 0 0px',
+      'width': '300px',
+      'border-bottom': '1px solid #fefbfb'
+    });
+  });
+
+  $('.search_clear').click(function () {
+    search.val('');
+  });
+
+
+  $('.svg-search').click(function () {
+    search.focus();
+    $(this).css({'z-index': '3'});
+    $('.search').css({'padding-left': '20px'});
+    setTimeout(() => {
+      $(this).hide(200);
+      $('.search_clear').show(200);
+    }, 100);
+  }); 
+
   // меню
   const menu = $('#leftdrop');
 

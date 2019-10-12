@@ -78,6 +78,11 @@ div {
   padding: 0;
 }
 
+input:invalid {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
 body {
   color: #333a4e;
   font-size: 18px;
@@ -281,6 +286,10 @@ a:hover {
   width: 28px;
 }
 
+.search {
+  padding-left: 38px;
+}
+
 .search form {
   height: 30px;
   display: -webkit-box;
@@ -295,9 +304,7 @@ a:hover {
 .search input {
   height: 100%;
   width: 0;
-  padding: 0 18px 0 0px;
   border: none;
-  border-bottom: 2px solid transparent;
   outline: none;
   background: transparent;
   -webkit-transition: 0.4s cubic-bezier(0, 0.8, 0, 1);
@@ -305,18 +312,6 @@ a:hover {
   z-index: 2;
   color: #fefbfb;
   font-size: 16px;
-  cursor: pointer;
-}
-
-.search input:focus {
-  width: 300px;
-  z-index: 1;
-  border-bottom: 1px solid #fefbfb;
-  cursor: initial;
-}
-
-.search input:focus + button {
-  z-index: 4;
 }
 
 .search button {
@@ -329,14 +324,29 @@ a:hover {
   right: 0;
 }
 
-.search button svg {
+.search svg {
   fill: #fefbfb;
   width: 18px;
   height: 18px;
   position: absolute;
-  top: 0;
+  top: 5px;
   right: 0;
   cursor: pointer;
+}
+
+.search .search_clear {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  cursor: pointer;
+  display: none;
+  z-index: 3;
+}
+
+.search .search_clear svg {
+  fill: #fefbfb;
+  width: 14px;
+  height: 14px;
 }
 
 header {
@@ -392,7 +402,7 @@ header .container nav ul {
   display: flex;
 }
 
-header .container nav ul li a {
+header .container nav ul li:not(:last-child) a {
   margin-right: 20px;
 }
 

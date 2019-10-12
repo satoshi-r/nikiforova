@@ -66,6 +66,11 @@ div {
   padding: 0;
 }
 
+input:invalid {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
 body {
   color: #fefbfb;
   background: #687586;
