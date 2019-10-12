@@ -324,17 +324,17 @@ a:hover {
   right: 0;
 }
 
-.search svg {
+.search .svg-search {
   fill: #fefbfb;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   position: absolute;
-  top: 5px;
+  top: 7px;
   right: 0;
   cursor: pointer;
 }
 
-.search .search_clear {
+.search .svg-clear {
   position: absolute;
   top: 5px;
   right: 0;
@@ -343,7 +343,7 @@ a:hover {
   z-index: 3;
 }
 
-.search .search_clear svg {
+.search .svg-clear svg {
   fill: #fefbfb;
   width: 14px;
   height: 14px;

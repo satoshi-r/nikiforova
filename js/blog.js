@@ -10,10 +10,21 @@ $(document).ready(function () {
     });
   });
 
+  function searchBlur() {
+    search.blur().css({
+      'padding': '0',
+      'width': '0',
+      'border-bottom': 'none'
+    });
+    $('.search').css({ 'padding-left': '38px' });
+
+    $('.svg-search').show(200);
+    $('.svg-clear').hide(200);
+  }
+
   $('.search_clear').click(function () {
     search.val('');
   });
-
 
   $('.svg-search').click(function () {
     search.focus();
@@ -21,9 +32,16 @@ $(document).ready(function () {
     $('.search').css({'padding-left': '20px'});
     setTimeout(() => {
       $(this).hide(200);
-      $('.search_clear').show(200);
+      $('.svg-clear').show(200);
     }, 100);
   }); 
+
+  $(document).keydown(function (e) {// нажатие на esc
+    if (e.keyCode === 27) {
+      e.stopPropagation();
+      searchBlur();
+    }
+  });
 
   // меню
   const menu = $('#leftdrop');
