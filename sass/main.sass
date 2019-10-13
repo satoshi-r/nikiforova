@@ -309,33 +309,20 @@ section
     display: flex
     flex-direction: column
     justify-content: space-between
-    .subject
+    li
       width: 100%
       display: flex
-      .icon
-        width: 76px
-        min-width: 76px
-        height: 76px
+      align-items: center
+      &:before
+        content: ''
+        display: block
+        background-image: url('../img/send.svg')
         background-repeat: no-repeat
-        background-size: contain
-      &:nth-child(1) .icon
-        background-image: url('../img/subject_icon1.png')
-      &:nth-child(2) .icon
-        background-image: url('../img/subject_icon2.png')
-      &:nth-child(3) .icon
-        background-image: url('../img/subject_icon3.png')  
-      &:nth-child(4) .icon
-        background-image: url('../img/subject_icon4.png')
-      &:nth-child(5) .icon
-        background-image: url('../img/subject_icon5.png')
-      &:nth-child(6) .icon
-        background-image: url('../img/subject_icon6.png')
-      &:nth-child(7) .icon
-        background-image: url('../img/subject_icon7.png')
-      .subject_title
-        display: flex
-        align-items: center
-        padding-left: 50px
+        background-size: cover
+        min-width: 24px
+        width: 24px
+        height: 24px
+        margin-right: 20px
 
 // Награды
 #awards
