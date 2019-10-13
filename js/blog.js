@@ -1,40 +1,69 @@
 $(document).ready(function () {
   // поиск
-  const search = $('input[name="search"]');
+  const search = $('input[name="search"]'),
+    mq920 = window.matchMedia("screen and (max-width: 920px)"),
+    mq576 = window.matchMedia("screen and (max-width: 576px)"),
+    mq480 = window.matchMedia("screen and (max-width: 480px)");
 
   search.focus(function () {
+    let value = '300px';
+    if (mq920.matches) {
+      value = '200px';
+    }
+    if (mq480.matches) {
+      value = '100%';
+      $('.logo img').css({
+        'margin-right': '0'
+      })
+    }
     $(this).css({
       'padding': '0 18px 0 0px',
-      'width': '300px',
+      'width': value,
       'border-bottom': '1px solid #fefbfb'
     });
+    if (mq576.matches) {
+      $('.logo p').hide(100);
+    }
+
   });
 
   function searchBlur() {
     search.blur().css({
-      'padding': '0',
       'width': '0',
       'border-bottom': 'none'
+    }, function () {
+      search.css({ 'padding': '0' })
     });
-    $('.search').css({ 'padding-left': '38px' });
 
     $('.svg-search').show(200);
     $('.svg-clear').hide(200);
+
+    if ($('.logo p').is(':hidden')) {
+      $('.logo p').show(400);
+      $('.logo img').css({ 'margin-right': '20px' })
+    }
   }
 
-  $('.search_clear').click(function () {
+  $('.svg-clear').click(function () {
     search.val('');
   });
 
   $('.svg-search').click(function () {
     search.focus();
-    $(this).css({'z-index': '3'});
-    $('.search').css({'padding-left': '20px'});
+    $(this).css({ 'z-index': '3' });
+    $('.search').css({ 'padding-left': '20px' });
     setTimeout(() => {
       $(this).hide(200);
       $('.svg-clear').show(200);
     }, 100);
-  }); 
+  });
+
+  $(window).scroll(function (e) {
+    if ($(this).scrollTop() > 150) {
+      e.stopPropagation();
+      searchBlur();
+    }
+  });
 
   $(document).keydown(function (e) {// нажатие на esc
     if (e.keyCode === 27) {
@@ -61,15 +90,19 @@ $(document).ready(function () {
   });
 
   $('#burger a').click(function () {
+    let value = '300px';
+    if (mq480.matches) {
+      value = '250px';
+    }
     $('.overlay').show();
     menu.css({
       'display': 'block',
-      'width': '300px'
+      'width': value
     }, setTimeout(() => {
       menu.find('#close').fadeIn();
     }, 400));
   });
-  
+
   $('#leftdrop a:not(.menu_category), .overlay').click(function () {
     closeMenu();
   });

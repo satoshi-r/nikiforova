@@ -49,6 +49,41 @@
   header .container .search input:focus
     width: 160px
 
+  // blog
+  header
+    nav
+      display: none
+  #leftdrop
+      a
+        font-size: 16px
+      nav
+        display: block
+        .menu_category
+          svg
+            width: 9px
+            height: 9px
+            fill: $text_white
+            margin-left: 5px
+            transition: .4s
+      h3
+        display: none
+      aside
+        max-height: 0
+        overflow: hidden
+        transition: .4s
+        margin: 0 -30px
+        ul
+          padding: 0
+          li
+            margin: 0
+        a
+          padding: 0 40px !important
+      .category_open
+        aside
+          max-height: 300px
+        .menu_category svg
+          transform: rotate(90deg)
+
 @media screen and (max-width: 920px)
   section:not(#contacts)
     user-select: none
@@ -126,8 +161,6 @@
       display: inline-block
     header
       font-size: 16px
-      nav
-        display: none
     .container
       height: 100%
     h2
@@ -266,8 +299,12 @@
 
   // blog
   .blog
-    header
+    header, .search input
       font-size: 14px
+    article
+      margin-left: -20px
+      margin-right: -20px
+    
 
 @media screen and (max-width: 380px)
   body
@@ -318,3 +355,21 @@
 
   #contacts .container .contacts_wrap .number i, #contacts .container .contacts_wrap .mail i, #contacts .container .contacts_wrap .vk i
     font-size: 24px
+
+  // blog
+  .blog
+    #burger
+      margin-left: 15px
+    .search
+      padding-left: 0
+      .svg-search
+        top: 5px
+    h2
+      font-size: 20px
+    .page-content .container main 
+      .articles_container article .article_header
+        font-size: 14px
+        .article_category-container a
+          font-size: 14px
+      h1.title_feature
+        font-size: 18px
