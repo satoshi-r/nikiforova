@@ -736,6 +736,22 @@ footer .container .logo img {
 }
 
 @media screen and (max-width: 768px) {
+  .thumbnail {
+    width: 100vw;
+    position: fixed;
+    z-index: -1;
+    opacity: 0.1;
+  }
+  .container {
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 0;
+    padding-left: 5px;
+    line-height: normal;
+  }
+  .container h2 {
+    margin-bottom: 15px;
+  }
   #gallery .container .photo_wrap {
     -ms-flex-pack: distribute;
         justify-content: space-around;
@@ -831,22 +847,6 @@ footer .container .logo img {
 }
 
 @media screen and (max-width: 500px) {
-  .thumbnail {
-    width: 100vw;
-    position: fixed;
-    z-index: -1;
-    opacity: 0.1;
-  }
-  .container {
-    width: 100%;
-    padding-top: 25px;
-    padding-bottom: 0;
-    padding-left: 5px;
-    line-height: normal;
-  }
-  .container h2 {
-    margin-bottom: 15px;
-  }
   #first .first_bg {
     height: 33vh;
   }
@@ -887,18 +887,11 @@ footer .container .logo img {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  #subjects .subject_wrap .subject .icon {
-    width: 40px;
-    min-width: 40px;
-    height: 40px;
-  }
-  #subjects .subject_wrap .subject {
+  #subjects .subject_wrap li {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     margin-bottom: 30px;
-  }
-  #subjects .subject_wrap .subject .subject_title {
     padding-left: 10px;
   }
   .filter_container {
