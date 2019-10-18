@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Блог преподавателя</title>
+  <!-- Normalize -->
+  <link rel="stylesheet" href="libs/normalize.css">
+  <link rel="stylesheet" href="css/blog.css">
+</head>
+
+<body class="blog">
+  <div class="overlay"></div>
+  <div id="leftdrop">
+
+    <a id="close">
+      <?xml version="1.0" encoding="iso-8859-1"?>
+      <img src="img/close.png" alt="x">
+    </a>
+
+    <div class="menu_container">
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="front-page.html">Все статьи</a></li>
+          <li>
+            <a class="menu_category">Категории
+              <?xml version="1.0" encoding="iso-8859-1"?>
+              <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+              <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="451.846px" height="451.847px"
+                viewBox="0 0 451.846 451.847" style="enable-background:new 0 0 451.846 451.847;" xml:space="preserve">
+                <g>
+                  <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+          		L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+          		c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z" />
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <h3 class="h2">Категории</h3>
+      <aside>
+        <ul>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">JavaScript</a></li>
+        </ul>
+      </aside>
+    </div>
+
+  </div>
+
+  <header>
+    <div class="container">
+      <a href="front-page.html" class="logo">
+        <img src="img/first_ava.png">
+        <p>Блог преподавателя</p>
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="front-page.html">Все статьи</a></li>
+        </ul>
+      </nav>
+
+      <div class="search">
+        <form>
+          <input name="search" type="text" placeholder="Поиск по блогу..." required>
+
+          <img class="svg-search" src="img/search.png" alt="search">
+
+          <a class="svg-clear">
+            <img src="img/close.png" alt="x">
+          </a>
+
+          <button class="hidden" type="submit"></button>
+        </form>
+      </div>
+
+      <div id="burger">
+        <a><img src="img/menu_blog.png" alt="="></a>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-content">
+    <div class="container">
+
+      <main>
+        <div class="post">
+          <h1>Пузырьковая сортировка на JavaScript</h1>
+
+          <div class="article_header">
+            <div class="date">25 сентября в 18:51,</div>
+            <div class="article_category-container">
+              <a href="">JavaScript</a>
+            </div>
+          </div>
+
+          <p>
+            Пузырьковая сортировка – один из самых широко обсуждаемых (и несовершенных) алгоритмов. Если массив уже
+            отсортирован, то
+            алгоритм пройдется по нему только один раз. Однако в худшем сценарии количество операций будет O(N²), что
+            крайне
+            неэффективно.
+          </p>
+
+          <img src="img/bubbles.png" alt="post_thumbnail">
+
+          <p>Даже Барак Обама однажды <a href="https://www.youtube.com/watch?v=k4RRi_ntQc8">признал неэффективность
+              сортировки</a> пузырьком.</p>
+
+          <p>
+            Если нарисовать график роста количества операций в зависимости от размера массива, то мы увидим, что по
+            сравнению <a href="https://proglib.io/p/sort/">другими алгоритмами сортировки</a>, такими как, например,
+            сортировка слиянием с ее O(N Log N), сортировка пузырьком растет
+            значительно быстрее.
+          </p>
+
+          <img src="img/graph.png" alt="gopa">
+
+          <p>
+            Несмотря на это, просто ради практики интересно понять сам алгоритм и почему он работает так медленно.
+          </p>
+
+          <p>
+            Давайте углубимся в концепции проведения пузырьковой сортировки.
+          </p>
+
+          <h2>Пузырьковая сортировка: концепция 1</h2>
+
+          <ul>
+            <li>
+              Проходим по всему массиву и сравниваем текущий элемент со следующим.
+            </li>
+            <li>
+              Если он больше следующего, то переставляем их местами.
+            </li>
+            <li>
+              Если не больше, увеличиваем указатель и сравниваем два следующих элемента.
+            </li>
+            <li>
+              Достигнув конца мы знаем, что самый большой элемент массива находится в последней позиции.
+            </li>
+            <li>
+              Повторяем процесс N раз (где N – длинна массива) и каждый раз проходим до последнего отсортированного элемента.
+            </li>
+          </ul>
+
+          <p>
+            Вот как это выглядит на практике:
+          </p>
+
+          <img src="img/sort_bubble.png" alt="gopa">
+
+          <h3>Код</h3>
+
+          <p>
+            Для реализации такой концепции нам нужны два указателя (два вложенных цикла). Каждый раз, когда мы выполняем итерацию,
+            верхняя граница уменьшается на единицу, поскольку мы знаем, что этот элемент уже содержит отсортированное значение.
+          </p>
+
+        <pre>
+          <code>
+  function bubbleSortConcept1(arr) {
+    for (let j = arr.length - 1; j > 0; j--) {
+      for (let i = 0; i < j; i++) {
+        if (arr[i] > arr[i + 1]) {
+          let temp = arr[i];
+          arr[i] = arr[i + 1];
+          arr[i + 1] = temp;
+        }
+      }
+    }
+  }
+          </code>
+        </pre>
+
+        <h2>Пузырьковая сортировка: концепция 2</h2>
+
+        <ul>
+          <li> 
+            Проходим по всему массиву и сравниваем текущий элемент со следующим.
+          </li>
+          <li> 
+            Если текущий элемент больше следующего, меняем их местами.
+          </li>
+          <li> 
+            Отмечаем, что обмен произошел.
+          </li>
+          <li> 
+            Если обмен произошел, проходим по массиву с начала.
+          </li>
+          <li> 
+            Мы знаем, что массив отсортирован, когда обменов уже не будет.
+          </li>
+        </ul>
+
+        <p>Вот как это выглядит на практике:</p>
+
+        <img src="img/sort_bubble2.png" alt="gopa">
+
+        <h3>Код</h3>
+
+        <p>
+          Теперь нам нужен только один указатель, так как мы используем переменную для хранения логического значения,
+          указывающего, произошел ли обмен или нет. В отличие от первого варианта, эта концепция требует от нас обработки каждого
+          элемента в массиве каждый раз, когда мы проходим через него.
+        </p>
+
+        <pre>
+          <code>
+  function bubbleSortConcept2(arr) {
+    let swapped;
+
+    do {
+      swapped = false;
+      console.log(arr);
+      arr.forEach((item, index) => {
+        if (item > arr[index + 1]) {
+          // Save the value to a variable so we don't lose it
+          let temp = item;
+          arr[index] = arr[index + 1];
+          arr[index + 1] = temp;
+          swapped = true;
+        }
+      })
+    } while (swapped);
+  }
+          </code>
+        </pre>
+
+        <h2>Время выполнения</h2>
+
+        <p>
+          Пузырьковая сортировка – один из самых неэффективных алгоритмов с количеством операций O(N²). В худшем случае вам
+          придется сравнивать каждый элемент со всеми другими в массиве, так что времени на это уйдет предостаточно. Но теперь вы
+          знакомы с этим алгоритмом и вряд ли будете использовать его в своих проектах.
+        </p>
+        </div>
+      </main>
+
+      <div class="sidebar">
+        <h3 class="h2">Категории</h3>
+        <aside>
+          <ul>
+            <li><a href="#">JavaScript<span>10</span></a></li>
+            <li><a href="#">JavaScript<span>10</span></a></li>
+            <li><a href="#">JavaScript<span>10</span></a></li>
+            <li><a href="#">JavaScript<span>10</span></a></li>
+            <li><a href="#">JavaScript<span>10</span></a></li>
+            <li><a href="#">JavaScript<span>10</span></a></li>
+            <li><a href="#">JavaScript<span>10</span></a></li>
+            <li><a href="#">JavaScript<span>10</span></a></li>
+          </ul>
+        </aside>
+      </div>
+
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <a href="front-page.html" class="logo">
+        <img src="img/first_ava.png">
+        <p>Блог преподавателя</p>
+      </a>
+
+      <div>2019</div>
+    </div>
+  </footer>
+
+  <a href="" class="back-top">
+    <img src="img/back-top.svg" alt="наверх">
+  </a>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/blog.js"></script>
+</body>
+
+</html>

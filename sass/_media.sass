@@ -208,6 +208,9 @@
         .menu_category svg
           transform: rotate(90deg)
 
+    .svg-clear
+      top: 8px
+
 @media screen and (max-width: 500px)
   #first .first_bg
     height: 33vh
@@ -304,7 +307,6 @@
     article
       margin-left: -20px
       margin-right: -20px
-    
 
 @media screen and (max-width: 380px)
   body
@@ -373,3 +375,20 @@
           font-size: 14px
       h1.title_feature
         font-size: 18px
+
+// bootstrap container
+@media (min-width: 576px)
+  .blog .container
+    max-width: 540px
+
+@media (min-width: 768px)
+  .blog .container
+    max-width: 720px
+  
+@media (min-width: 992px) 
+  .blog .container
+    max-width: 960px
+  
+@media (min-width: 1200px) 
+  .blog .container
+    max-width: 1140px

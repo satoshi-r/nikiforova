@@ -12,7 +12,7 @@ h1
 h2, .h2
   @extend %blog-h2
 
-h3
+h3, h4, h5, h6
   @extend %blog-h3
 
 a
@@ -25,22 +25,6 @@ a
   padding: 0 15px
   margin-right: auto
   margin-left: auto
-
-@media (min-width: 576px)
-  .blog .container
-    max-width: 540px
-
-@media (min-width: 768px)
-  .blog .container
-    max-width: 720px
-  
-@media (min-width: 992px) 
-  .blog .container
-    max-width: 960px
-  
-@media (min-width: 1200px) 
-  .blog .container
-    max-width: 1140px
 
 // burger
 @keyframes alarm
@@ -117,8 +101,6 @@ a
     width: 18px
     height: 18px
 
-
-
 #burger
   margin-left: 30px
   display: none
@@ -170,8 +152,7 @@ a
     cursor: pointer
     display: none
     z-index: 3
-    svg
-      fill: $text_white
+    img
       width: 14px
       height: 14px
 
@@ -251,6 +232,8 @@ header
               opacity: unset
             img
               width: 100%
+              height: 360px
+              object-fit: cover
       .load_more
         @extend %text-bold
         font-size: 18px
@@ -302,6 +285,50 @@ header
               align-items: center
               &:hover
                 opacity: 1
+
+.post
+  @extend %block_shadow
+  border-radius: 3px
+  background-color: #fff
+  padding: 20px
+  margin-bottom: 20px
+  position: relative
+  .article_header
+    display: flex
+    align-items: flex-end
+    flex-direction: row
+    flex-wrap: wrap
+    margin-top: 20px
+    margin-bottom: 30px
+    .date
+      margin-right: 20px
+    .article_category-container
+      a
+        color: $text_dark
+        margin-right: 20px
+        @extend %text-bold
+        font-size: 18px
+  img
+    width: 100%
+    margin-bottom: 20px
+  p, li
+    font-size: 16px
+    margin-top: 0
+    margin-bottom: 20px
+    line-height: 1.4
+  a
+    color: $accent
+    font-weight: bold
+  h2, h3, h4, h5, h6
+    margin-top: 10px
+    margin-bottom: 20px
+  ul, ol
+    list-style-position: inside
+    margin-left: 20px
+  pre
+    background: $bg
+    color: $text_white
+
 
 footer
   background-color: $blog_accent
