@@ -574,6 +574,11 @@ header .container nav ul li:not(:last-child) a {
   margin-bottom: 30px;
 }
 
+.post .article_header:last-child {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
 .post .article_header .date {
   margin-right: 20px;
 }
