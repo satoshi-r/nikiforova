@@ -1,9 +1,10 @@
 $(document).ready(function () {
-  // поиск
-  const search = $('input[name="search"]'),
-    mq920 = window.matchMedia("screen and (max-width: 920px)"),
+  // для поправок адаптивности
+  const mq920 = window.matchMedia("screen and (max-width: 920px)"),
     mq576 = window.matchMedia("screen and (max-width: 576px)"),
     mq480 = window.matchMedia("screen and (max-width: 480px)");
+  // поиск
+  const search = $('input[name="search"]');
 
   search.focus(function () {
     let value = '300px';
@@ -65,7 +66,7 @@ $(document).ready(function () {
     }
   });
 
-  $(document).keydown(function (e) {// нажатие на esc
+  $(document).keydown(function (e) { // нажатие на esc
     if (e.keyCode === 27) {
       e.stopPropagation();
       searchBlur();
@@ -117,19 +118,22 @@ $(document).ready(function () {
   $(function () {
     $(".back-top").hide();
 
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > 600) {
-        $(".back-top").fadeIn();
-      } else {
-        $(".back-top").fadeOut();
-      }
-    });
-
+    if(!mq576.matches) { // для мобилок отключить
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 600) {
+          $(".back-top").fadeIn();
+        } else {
+          $(".back-top").fadeOut();
+        }
+      });
+    }
+      
     $(".back-top").click(function () {
       $("body,html").animate({
         scrollTop: 0
       }, 800);
       return false;
     });
+    
   });
 });

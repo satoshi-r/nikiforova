@@ -123,8 +123,11 @@
     height: 100%
 
   // blog
-  .blog h2
-    width: 100%
+  .blog 
+    h2
+      width: 100%
+    h1:not(.title_feature)
+      font-size: 25px
 
 @media screen and (max-width: 768px)
   .thumbnail
@@ -173,7 +176,7 @@
     .article_preview
       display: block
       font-size: 16px
-    .load_more
+    .page-content .container main .load_more
       font-size: 16px
     footer
       font-size: 14px
@@ -304,9 +307,14 @@
   .blog
     header, .search input
       font-size: 14px
-    article
-      margin-left: -20px
-      margin-right: -20px
+    article, .post
+      margin-left: -15px
+      margin-right: -15px
+    .post
+      margin-bottom: 0
+      margin-top: -30px
+    .page-content .container main .articles_container article .article_thumb img
+      height: 100%
 
 @media screen and (max-width: 380px)
   body
@@ -375,6 +383,9 @@
           font-size: 14px
       h1.title_feature
         font-size: 18px
+    h1:not(.title_feature)
+      font-size: 22px
+
 
 // bootstrap container
 @media (min-width: 576px)
