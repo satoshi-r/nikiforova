@@ -145,4 +145,7 @@ $(document).ready(function () {
     });
     
   });
+
+  // fancybox
+  $('.post img').fancybox();
 });
