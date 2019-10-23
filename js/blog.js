@@ -12,7 +12,7 @@ $(document).ready(function () {
       value = '200px';
     }
     if (mq480.matches) {
-      value = '100%';
+      value = '50vw';
       $('.logo img').css({
         'margin-right': '0'
       })
