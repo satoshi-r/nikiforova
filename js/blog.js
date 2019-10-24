@@ -46,7 +46,7 @@ $(document).ready(function () {
   }
 
   $('.svg-clear').click(function () {
-    search.val('');
+    searchBlur();
   });
 
   $('.svg-search').click(function () {
