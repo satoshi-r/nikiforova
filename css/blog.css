@@ -589,10 +589,17 @@ header .container nav ul li:not(:last-child) a {
   font-size: 18px;
 }
 
+.post .fancy {
+  display: block;
+}
+
+.post .fancy:hover {
+  opacity: 0.9;
+}
+
 .post img {
   width: 100%;
   margin-bottom: 20px;
-  cursor: pointer;
 }
 
 .post p, .post li {

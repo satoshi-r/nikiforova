@@ -147,5 +147,10 @@ $(document).ready(function () {
   });
 
   // fancybox
-  $('.post img').fancybox();
+  $('.post img').each(function () {
+    $(this).wrap("<a href=" + $(this).attr('src') + "></a>");
+    let wrap = $(this).parent();
+    wrap.addClass('fancy')
+  });
+  $('.fancy').fancybox();
 });
