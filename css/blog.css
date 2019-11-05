@@ -480,7 +480,7 @@ header .container nav ul li:not(:last-child) a {
 }
 
 .page-content .container main .load_more:hover {
-  background-color: #fff;
+  background-color: #d9d9d9;
   color: unset;
   opacity: unset;
 }
